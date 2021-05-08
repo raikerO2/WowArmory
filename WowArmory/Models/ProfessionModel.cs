@@ -22,7 +22,7 @@ namespace WowArmory.Models
         public int Id { get; set; }
 
         [Column("p_name")]
-        [StringLength(50)]
+        [StringLength(500)]
         [Display(Name = "Name")]
         public string Name { get; set; }
 

@@ -19,17 +19,17 @@ namespace WowArmory.Models
 
         [Column("s_category")]
         [Display(Name="Category")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Category { get; set; }
 
         [Column("s_name")]
         [Display(Name="Name")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Name { get; set; }
 
         [Column("s_faction")]
         [Display(Name="Faction")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Faction { get; set; }
 
         [Column("s_cost")]

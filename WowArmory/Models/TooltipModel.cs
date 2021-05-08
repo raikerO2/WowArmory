@@ -23,13 +23,13 @@ namespace WowArmory.Models
 
         [Column("t_label")]
         [Display(Name ="Label")]
-        [StringLength(200)]
+        [StringLength(1000)]
 
         public string Label { get; set; }
 #nullable enable
         [Column("t_format")]
         [Display(Name ="Format")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string? Format { get; set; }
     }
 }

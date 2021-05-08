@@ -23,12 +23,12 @@ namespace WowArmory.Models
 
         [Column("s_name")]
         [Display(Name="Name")]
-        [StringLength(50)]
+        [StringLength(500)]
         public string Name { get; set; }
 
         [Column("s_icon")]
         [Display(Name="Icon")]
-        [StringLength(50)]
+        [StringLength(500)]
         public string Icon { get; set; }
     }
 }

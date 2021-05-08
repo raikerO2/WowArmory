@@ -20,17 +20,17 @@ namespace WowArmory.Models
 
         [Column("c_name")]
         [Display(Name = "Name")]
-        [StringLength(50)]
+        [StringLength(500)]
         public string Name { get; set; }
 
         [Column("c_color")]
         [Display(Name = "Color")]
-        [StringLength(50)]
+        [StringLength(500)]
         public string Color { get; set; }
 
         [Column("c_icon")]
         [Display(Name = "Icon")]
-        [StringLength(50)]
+        [StringLength(500)]
         public string Icon { get; set; }
 
         [Column("specsid")]

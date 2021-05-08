@@ -23,7 +23,7 @@ namespace WowArmory.Models
 
         [Column("t_name")]
         [Display(Name="Name")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Name { get; set; }
 
 #nullable enable

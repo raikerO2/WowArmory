@@ -23,22 +23,22 @@ namespace WowArmory.Models
 
         [Column("d_name")]
         [Display(Name = "Name")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Name { get; set; }
 
         [Column("d_icon")]
         [Display(Name = "Icon")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Icon { get; set; }
 
         [Column("d_class")]
         [Display(Name = "Class")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Class { get; set; }
 
         [Column("d_subclass")]
         [Display(Name = "Sub Class")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Subclass { get; set; }
 
         [Column("d_sellprice")]
@@ -47,7 +47,7 @@ namespace WowArmory.Models
 
         [Column("d_quality")]
         [Display(Name = "Quality")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Quality { get; set; }
 
         [Column("d_itemlevel")]
@@ -60,7 +60,7 @@ namespace WowArmory.Models
 
         [Column("d_slot")]
         [Display(Name = "Slot")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Slot { get; set; }
 
         [Column("d_vendorprice")]
@@ -73,7 +73,7 @@ namespace WowArmory.Models
 
         [Column("d_uniquename")]
         [Display(Name = "Unique Name")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string UniqueName { get; set; }
 
         [Column("d_tooltip")]

@@ -10,34 +10,14 @@ namespace WowArmory.Controllers
 {
     public class ClassesController : Controller
     {
-        private DatabaseContext _db = null;
-        public ClassesController(DatabaseContext db)
+        private DatabaseContext _database = null;
+        public ClassesController(DatabaseContext database)
         {
-            _db = db;
+            _database = database;
         }
         public IActionResult Index()
         {
-            ClassModel theClass = new ClassModel();
-            theClass.Name = "Muie";
-            theClass.Color = "Fasole";
-            theClass.Icon = "cacat";
-            theClass.Spec = new List<SpecModel>() 
-            { 
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" },
-                new SpecModel { Name = "cacat", Icon = "pisat" }
-            };
-            _db.Classes.Add(theClass);
-            _db.SaveChanges();
+           
             return View();
         }
     }

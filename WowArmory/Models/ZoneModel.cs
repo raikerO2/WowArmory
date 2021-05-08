@@ -23,23 +23,22 @@ namespace WowArmory.Models
 
         [Column("z_name")]
         [Display(Name = "Name")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Name { get; set; }
 
         [Column("z_category")]
         [Display(Name = "Category")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Category { get; set; }
 
         [Column("z_territory")]
         [Display(Name = "Territory")]
-        [StringLength(200)]
+        [StringLength(500)]
         public string Territory { get; set; }
 
         [Column("z_level")]
         [Display(Name = "Level")]
 #nullable enable
-        public ICollection<int>? Level { get; set; }
-
+        public LevelModel? Level { get; set; }
     }
 }
