@@ -6,30 +6,29 @@ using System.Linq;
 using System.Threading.Tasks;
 using WowArmory.Models.Core;
 
-
 namespace WowArmory.Models
 {
-    [Table("Quest")]
-    public class QuestModel : IData
+    [Table("Profession")]
+    public class ProfessionModel : IData
     {
         [Key]
+        [Column("professionid")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("questid")]
-        [Display(Name="Quest Id")]
-        public int QuestId { get; set; }
+        [Display(Name="Profession Id")]
+        public int ProfessionId { get; set; }
 
         [Column("id")]
         [Display(Name="Id")]
         public int Id { get; set; }
 
-        [Column("q_name")]
-        [Display(Name="Name")]
+        [Column("p_name")]
         [StringLength(50)]
+        [Display(Name = "Name")]
         public string Name { get; set; }
-        
-        [Column("q_faction")]
-        [Display(Name="Faction")]
+
+        [Column("i_icon")]
         [StringLength(50)]
-        public string Faction { get; set; }
+        [Display(Name="Icon")]
+        public string Icon { get; set; }
     }
 }

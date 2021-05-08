@@ -17,14 +17,26 @@ namespace WowArmory.Controllers
         }
         public IActionResult Index()
         {
-            ClassModel classes = new ClassModel();
-            classes.Id = 1;
-            classes.Name = "Fasole";
-            classes.Icon = "Fasole2";
-            classes.Color = "Fasole3";
-            classes.Spec = new List<SpecModel>() { new SpecModel { Id = 1, Name = "Name1", Icon = "Icon1" } };
-
-            _db.Classes.Add(classes);
+            ClassModel theClass = new ClassModel();
+            theClass.Name = "Muie";
+            theClass.Color = "Fasole";
+            theClass.Icon = "cacat";
+            theClass.Spec = new List<SpecModel>() 
+            { 
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" },
+                new SpecModel { Name = "cacat", Icon = "pisat" }
+            };
+            _db.Classes.Add(theClass);
             _db.SaveChanges();
             return View();
         }

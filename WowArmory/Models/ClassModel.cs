@@ -11,7 +11,11 @@ namespace WowArmory.Models
         [Column("classid")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "Id")]
+        [Display(Name = "Class Id")]
+        public int ClassId { get; set; }
+
+        [Column("id")]
+        [Display(Name="Id")]
         public int Id { get; set; }
 
         [Column("c_name")]

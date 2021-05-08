@@ -14,6 +14,10 @@ namespace WowArmory.Models
         [Column("specid")]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Display(Name="Spec Id")]
+        public int SpecId { get; set; }
+
+        [Column("id")]
         [Display(Name="Id")]
         public int Id { get; set; }
 

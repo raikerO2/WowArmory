@@ -8,28 +8,27 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WowArmory.Models
 {
-    [Table("Tooltip")]
-    public class TooltipModel : IData
+    [Table("Talent")]
+    public class TalentModel : IData
     {
         [Key]
+        [Column("talentid")]
+        [Display(Name="Talent Id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("tooltipid")]
-        [Display(Name ="Tooltip")]
-        public int TooltipId { get; set; }
+        public int TalentId { get; set; }
 
         [Column("id")]
-        [Display(Name ="Id")]
+        [Display(Name="Id")]
         public int Id { get; set; }
 
-        [Column("t_label")]
-        [Display(Name ="Label")]
+        [Column("t_name")]
+        [Display(Name="Name")]
         [StringLength(200)]
+        public string Name { get; set; }
 
-        public string Label { get; set; }
 #nullable enable
-        [Column("t_format")]
-        [Display(Name ="Format")]
-        [StringLength(200)]
-        public string? Format { get; set; }
+        [Column("t_tooltip")]
+        [Display(Name="Tool Tip")]
+        public ICollection<TooltipModel>? ToolTip { get; set; }
     }
 }

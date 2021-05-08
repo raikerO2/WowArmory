@@ -35,6 +35,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "6.0.0-preview.1.21102.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-preview.1.21102.2",
+          "Microsoft.EntityFrameworkCore.Tools": "6.0.0-preview.1.21102.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
           "Newtonsoft.Json": "13.0.1",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -744,6 +745,11 @@
         },
         "compile": {
           "lib/net5.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.0-preview.1.21102.2": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "6.0.0-preview.1.21102.2"
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/6.0.0-preview.1.21102.12": {
@@ -3324,6 +3330,13 @@
       "sha512": "sha512-Sur/cjzq2EdGstlmBzdU1qu/CEdLW+RHNFdf/aQTC2Kh9T/rFcgYo/PxtK3No1/h9oCHlVnUbXJzGn527Y/xsg==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.0-preview.1.21102.2",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.0-preview.1.21102.2.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.0-preview.1.21102.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PqbLBKjYjGT7eowRvsuSP4BIu7Z2KG/mt/ZJLZOK3ffmybyCIBac54az6uVku3ukBFS5L3+pGSNAgjVyf1pomA==",
+      "path": "microsoft.entityframeworkcore.tools/6.0.0-preview.1.21102.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.6.0.0-preview.1.21102.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0-preview.1.21102.12": {
       "type": "package",
