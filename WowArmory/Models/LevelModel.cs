@@ -16,12 +16,13 @@ namespace WowArmory.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int LevelId { get; set; }
 
-        [Column("val1")]
-        [Display(Name = "Val1")]
-        public int Val1 { get; set; }
+#nullable enable
+        [Column("level1")]
+        [Display(Name = "Level1")]
+        public int? Level1 { get; set; }
 
-        [Column("val2")]
-        [Display(Name = "Val2")]
-        public int Val2 { get; set; }
+        [Column("level2")]
+        [Display(Name = "Level2")]
+        public int? Level2 { get; set; }
     }
 }

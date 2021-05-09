@@ -8,7 +8,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using WowArmory.Factory;
 using WowArmory.Models;
+using WowArmory.Models.Core;
 using WowArmory.Models.Core.Context;
 
 namespace WowArmory.Controllers
@@ -27,19 +29,10 @@ namespace WowArmory.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            string dataFile = System.IO.File.ReadAllText(_config["JsonData:Data"]);
-            List<DataModel> Data = JsonConvert.DeserializeObject<List<DataModel>>(dataFile);
-           
-            foreach(var data in Data)
-            {
-                var existingRecord = _database.Data.FirstOrDefault(x => x.ItemId == data.ItemId);
-                if (existingRecord == null)
-                {
-                  _database.Add(data);
-                  _database.SaveChanges();
-                } 
-            }
+            //Data already pressent in DB.
 
+            //DataEntry dataEntry = new DataEntry(_database,_config);
+            //dataEntry.InsertRecords<ZoneModel>("Zones");
             return View();
         }
 
