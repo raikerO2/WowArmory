@@ -20,6 +20,7 @@ namespace WowArmory.Factory
             _database = database;
             _configuration = configuration;
         }
+
         public void InsertRecords<T>(string data)
         {
             string jsonFile = System.IO.File.ReadAllText(_configuration[$"JsonData:{data}"]);

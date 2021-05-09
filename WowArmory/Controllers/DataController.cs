@@ -26,20 +26,67 @@ namespace WowArmory.Controllers
             _database = database;
         }
 
-        [HttpGet]
         public IActionResult Index()
         {
-            //Data already pressent in DB.
-
-            //DataEntry dataEntry = new DataEntry(_database,_config);
-            //dataEntry.InsertRecords<ZoneModel>("Zones");
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Index([FromBody]IFormFile file)
+        [HttpGet]
+        public IActionResult GetData(string dataItem)
         {
-            return View();
+            if (dataItem == null)
+                return View();
+
+            try
+            {
+                int? parser = Int32.Parse(dataItem);
+            }
+            catch (Exception e)
+            {
+                List<DataModel> nameList = _database.Data.Select(x => new DataModel
+                {
+                    DataId = x.DataId,
+                    Icon = x.Icon,
+                    Class = x.Class,
+                    ContentPhase = x.ContentPhase,
+                    ItemId = x.ItemId,
+                    ItemLevel = x.ItemLevel,
+                    Name = x.Name,
+                    Quality = x.Quality,
+                    RequiredLevel = x.RequiredLevel,
+                    SellPrice = x.SellPrice,
+                    Slot = x.Slot,
+                    Source = x.Source,
+                    Subclass = x.Subclass,
+                    Tooltip = x.Tooltip,
+                    UniqueName = x.UniqueName,
+                    VendorPrice = x.VendorPrice
+                }).Where(x => x.Name.Contains(dataItem)).ToList<DataModel>();
+
+                return View("GetData",nameList);
+            }
+
+            List<DataModel> itemIdList = _database.Data.Select(x => new DataModel
+            {
+                DataId = x.DataId,
+                Icon = x.Icon,
+                Class = x.Class,
+                ContentPhase = x.ContentPhase,
+                ItemId = x.ItemId,
+                ItemLevel = x.ItemLevel,
+                Name = x.Name,
+                Quality = x.Quality,
+                RequiredLevel = x.RequiredLevel,
+                SellPrice = x.SellPrice,
+                Slot = x.Slot,
+                Source = x.Source,
+                Subclass = x.Subclass,
+                Tooltip = x.Tooltip,
+                UniqueName = x.UniqueName,
+                VendorPrice = x.VendorPrice
+            }).Where(x => x.ItemId == Int32.Parse(dataItem)).ToList<DataModel>();
+            
+            return View("GetData", itemIdList);
         }
     }
 }

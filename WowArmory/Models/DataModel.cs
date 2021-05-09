@@ -80,7 +80,6 @@ namespace WowArmory.Models
         [Display(Name = "Tooltip")]
 #nullable enable
         public ICollection<TooltipModel>? Tooltip { get; set; }
-
         [Column("d_contentphase")]
         [Display(Name = "Content Phase")]
         public int? ContentPhase { get; set; }

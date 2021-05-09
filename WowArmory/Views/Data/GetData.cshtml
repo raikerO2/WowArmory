@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WowArmory.Models.DataModel>
+
+@{
+    ViewData["Title"] = "GetData";
+}
+
+@{ 
+    string dataItem = null;
+} 
+
+<form asp-action="GetData" asp-controller="Data" method="get">
+    <input type="text" asp-for="@dataItem"/>
+    <input type="submit" value="Search" />
+</form>
+
+<H2>Items</H2>
+
+@if (@Model != null)
+{
+
+    @foreach (var item in Model)
+    {
+        <hr />
+        <p>Icon: @Html.DisplayFor(x => item.Icon)</p>
+        <p>Item Id: @Html.DisplayFor(x => item.ItemId)</p>
+        <p>Item Level: @Html.DisplayFor(x => item.ItemLevel)</p>
+        <p>Name: @Html.DisplayFor(x => item.Name)</p>
+        <p>Quality: @Html.DisplayFor(x => item.Quality)</p>
+        <p>Required Level: @Html.DisplayFor(x => item.RequiredLevel)</p>
+        <p>Sell Price: @Html.DisplayFor(x => item.SellPrice)</p>
+        <p>Slot: @Html.DisplayFor(x => item.Slot)</p>
+        <p>Source: @Html.DisplayFor(x => item.Source)</p>
+        <p>Sub Class: @Html.DisplayFor(x => item.Subclass)</p>
+        <p>Tooltip: @Html.DisplayFor(x => item.Tooltip)</p>
+        <p>Unique Name: @Html.DisplayFor(x => item.UniqueName)</p>
+        <p>Vendor Price: @Html.DisplayFor(x => item.VendorPrice)</p>
+    }
+}

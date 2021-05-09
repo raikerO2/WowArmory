@@ -1,0 +1,3461 @@
+body {
+background:#061219;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#cff;
+}
+
+a {
+color:#cff;
+text-decoration:none;
+}
+
+a:hover {
+color:#FFF;
+text-decoration:underline;
+}
+
+.clear {
+clear:both;
+}
+
+.pad2 {
+padding-bottom:1em;
+}
+
+.pad3 {
+padding-bottom:2em;
+}
+
+#socialLinks {
+position:absolute;
+left:5px;
+top:4px;
+z-index:9999999999;
+}
+
+.cot-logo-home {
+	width:285px;
+	height:auto;
+	cursor:pointer;
+	margin:0 auto;
+	display: block;
+}
+
+.cot-logo-index {
+	float:left;
+	width:285px;
+	height:auto;
+	cursor:pointer;
+	margin:0 auto;
+	padding-top:40px;
+}
+
+#socialLinks .twitter {
+margin-left:6px;
+height:29px;
+width:29px;
+background:url(http://cdn.cavernoftime.com/images/twitter.png) no-repeat;
+}
+
+#socialLinks .facebook {
+height:29px;
+width:29px;
+background:url(http://cdn.cavernoftime.com/images/facebook.png) no-repeat;
+}
+
+#socialLinks div {
+float:left;
+cursor:pointer;
+}
+
+#topGrad {
+top:0;
+height:115px;
+width:100%;
+}
+
+#homeCont {
+height:200px;
+width:413px;
+margin:0 auto;
+margin-bottom:100px;
+}
+
+#pageCont {
+height:180px;
+width:100%;
+margin:-80px auto;
+}
+
+.homesearchWrap {
+width:413px;
+position:relative;
+margin:25px auto;
+margin-top:85px;
+
+}
+
+.homesearchBox {
+width:413px;
+height:40px;
+background:url(http://cdn.cavernoftime.com/images/searchbox_main.jpg) left center no-repeat;
+margin:0 auto;
+}
+
+.homesearchBox input {
+width:341px;
+color:#000;
+background:transparent;
+border:none;
+font-size:20px;
+outline:none;
+float:left;
+padding:10px 0 6px 8px;
+}
+
+.homesearchBox .btn {
+border:none;
+margin-right:0;
+width:43px;
+height:40px;
+background:url(http://cdn.cavernoftime.com/images/search_buttons.jpg) center top no-repeat;
+float:right;
+cursor:pointer;
+}
+
+.homesearchBox .btn:hover {
+background-position:0 -40px;
+}
+
+.homeNewsWrap {
+height:159px;
+width:413px;
+background:url(http://cdn.cavernoftime.com/images/news-box.png) no-repeat;
+display:block;
+margin:0 auto;
+}
+
+.homeNewsPad {
+padding-left:25px;
+padding-top:10px;
+text-align:left;
+font-size:12px;
+}
+
+.homeNewsPad ul {
+list-style-type:circle;
+line-height:20px;
+}
+
+.pagesearchWrap {
+width:413px;
+position:relative;
+float:right;
+margin:30px 0;
+}
+
+.pagesearchBox {
+width:413px;
+height:36px;
+background:url(http://cdn.cavernoftime.com/images/searchbox_small.png) left center no-repeat;
+margin:0 auto;
+}
+
+.pagesearchBox input {
+width:341px;
+color:#000;
+background:transparent;
+border:none;
+font-size:19px;
+outline:none;
+float:left;
+padding:8px 0 6px 8px;
+}
+
+.pagesearchBox .btn {
+border:none;
+margin-right:0;
+width:43px;
+height:36px;
+background:url(http://cdn.cavernoftime.com/images/search_buttons_small.png) center top no-repeat;
+float:right;
+cursor:pointer;
+}
+
+.pagesearchBox .btn:hover {
+background-position:0 -36px;
+}
+
+.pageheadBlock {
+width:1025px;
+position:relative;
+margin:0 auto;
+}
+
+#c_menubar {
+position:relative;
+top:0;
+width:1035px;
+height:36px;
+background:#031826;
+border:1px solid #091f2e;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+margin:0 auto;
+}
+
+#c_menubar .c_swrap {
+width:299px;
+height:23px;
+float:right;
+background:#fff;
+border:2px solid #3377a2;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+-moz-box-shadow:inset 0 0 2px 2px #98d6f4;
+-webkit-box-shadow:inset 0 0 2px 2px #98d6f4;
+box-shadow:inset 0 0 2px 2px #98d6f4;
+margin:5px 10px;
+}
+
+#c_menubar .c_swrap .field {
+width:251px;
+color:#000;
+background:transparent;
+border:none;
+font-size:13px;
+outline:none;
+float:left;
+padding:4px 0 3px 6px;
+}
+
+#c_menubar .c_swrap .btn {
+border:none;
+margin-right:0;
+width:41px;
+height:23px;
+background:url(http://cdn.cavernoftime.com/images/search_s.jpg) no-repeat;
+float:right;
+}
+
+#c_top {
+width:1024px;
+height:30px;
+margin:0 auto;
+}
+
+#c_top .pageLoc {
+	width:800px;
+	height:20px;
+	text-align:left;
+}
+
+#c_foot {
+width:922px;
+height:42px;
+margin:0 auto;
+}
+
+#footer {
+width:100%;
+height:30px;
+color:#069;
+text-align:center;
+font-size:11px;
+margin:55px auto;
+}
+
+#c_mid {
+width:1020px;
+background-color:#0e222f;
+border:1px solid #163245;
+overflow:hidden;
+position:relative;
+margin:0 auto;
+}
+
+#c_c {
+width:996px;
+position:relative;
+
+margin:0 auto;
+}
+
+.icheadempty {
+height:15px;
+width:100%;
+position:relative;
+}
+
+.ichead {
+height:40px;
+width:100%;
+position:relative;
+}
+
+.icheadl {
+height:1px;
+width:100%;
+position:absolute;
+top:25px;
+background-color:#1c3c44;
+z-index:10;
+display:none;
+}
+
+.iclinkbtn {
+	width:60px;
+	height:25px;
+	background-color:#0e222f;
+	border:1px solid #163245;
+	float:right;
+	color:#fff;
+	text-align:center;
+	margin:6px 0;
+	cursor:pointer;
+	font-weight:bold;
+	font-size:11px;
+}
+
+.iclinkbtn p {
+	margin:5px auto;
+}
+
+#locBox {
+color:#9cc;
+padding-left:5px;
+font-size:12px;
+text-decoration:none;
+}
+
+#locBox a {
+color:#9cc;
+}
+
+.locArrow {
+padding-right:14px;
+background:url(http://cdn.cavernoftime.com/images/bread_arrow.png) right center no-repeat;
+}
+
+.ictitle {
+z-index:11;
+background-color:#0e222f;
+font-size:14px;
+color:#9cc;
+position:absolute;
+text-align:left;
+top:11px;
+left:0;
+}
+
+.ictitle.icicon {
+padding-left:50px;
+overflow:none;
+}
+
+div#h1-icon-generic {
+margin-top:4px;
+z-index:999;
+position:relative;
+}
+
+.iclistingW {
+background-color:#142a38;
+border:1px solid #1c3c4e;
+-moz-box-shadow:0 0 1px 1px #000;
+-webkit-box-shadow:0 0 1px 1px #000;
+box-shadow:0 0 1px 1px #000;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+}
+
+.iclisting {
+margin-top:15px;
+}
+
+#menuBtnsWrap {
+width:413px;
+margin:-15px auto;
+}
+
+#menuBtnsWrap-Con {
+position:absolute;
+top:71px;
+right:269px;
+text-align:left;
+padding:0;
+}
+
+.menuBtns a {
+text-decoration:none;
+border:0;
+font-size:12px;
+white-space:nowrap;
+padding:3px 3px;
+padding-right:10px;
+}
+
+.menuBtns span {
+padding-right:13px;
+background:url(http://cdn.cavernoftime.com/images/arrow-down.gif) right center no-repeat;
+}
+
+.menu {
+position:absolute;
+z-index:9999;
+-moz-box-shadow:inset 0 0 5px 5px #000;
+-webkit-box-shadow:inset 0 0 5px 5px #000;
+box-shadow:inset 0 0 5px 5px #000;
+}
+
+.menu table td {
+vertical-align:top;
+padding:0;
+}
+
+.menu div div {
+white-space:nowrap;
+border:1px solid #2d5c77;
+}
+
+.menu span {
+display:block;
+padding:0 18px 0 0;
+}
+
+.menu span span {
+padding:0 0 0 18px;
+}
+
+.menu span.separator {
+background:#132d3e;
+color:#FFF;
+font-weight:700;
+cursor:default;
+padding:4px 7px;
+}
+
+.menu a {
+display:block;
+text-decoration:none;
+background-color:#1e3e50;
+color:#FFF;
+padding:4px;
+}
+
+.menu a.open,.menu a:hover {
+color:#6cf;
+background-color:#2d5c77;
+}
+
+.menu a.input:hover {
+background-color:#193a64;
+cursor:default;
+}
+
+.menusub {
+background:url(http://cdn.cavernoftime.com/images/menu_arrow.gif) right center no-repeat;
+}
+
+.menuarrow {
+padding-right:16px;
+background:url(http://cdn.cavernoftime.com/images/menu_check.gif) right center no-repeat;
+}
+
+.menuarrowd {
+padding-right:16px;
+background:url(http://cdn.cavernoftime.com/images/dmenu_arrow.gif) right center no-repeat;
+height:7px;
+}
+
+.qSearch {
+position:absolute;
+z-index:99;
+left:0;
+top:0;
+width:20px;
+white-space:nowrap;
+font-size:12px;
+border:1px solid #3377a2;
+padding:0 1px 1px;
+}
+
+.qSearch .expcont {
+	margin-left:35px;
+}
+
+.qSearch div {
+background-color:#010e17;
+height:26px;
+}
+
+.qSearch div.odd {
+background-color:#0e222f;
+}
+
+.qSearch div div {
+background-color:transparent;
+position:relative;
+overflow:hidden;
+}
+
+.qSearch .top {
+display:block;
+text-decoration:none;
+font-style:normal;
+line-height:1.5em;
+font-size:11px;
+background-color:#0e222f;
+padding:0 4px;
+}
+
+.qSearch .top p {
+font-style:italic;
+color:#FFF;
+margin:7px 3px;
+}
+
+.qSearch a {
+display:block;
+text-decoration:none;
+padding:6px 6px 6px 35px;
+}
+
+.qSearch i {
+display:block;
+position:absolute;
+font-style:normal;
+line-height:1.5em;
+top:3px;
+right:0;
+font-size:11px;
+text-align:left;
+color:#39c;
+padding:0 4px;
+}
+
+div.qSearch-ico {
+background-position:10px 4px;
+background-repeat:no-repeat;
+}
+
+div.qSearch-ico div {
+background-image:url(http://cdn.cavernoftime.com/images/icon_border_small.gif);
+background-position:6px 1px;
+background-repeat:no-repeat;
+}
+
+div.qSearch-ico-alliance {
+background-image:url(http://cdn.cavernoftime.com/images/alliance-icon.gif);
+background-position:9px 5px;
+background-repeat:no-repeat;
+}
+
+div.qSearch-ico-horde {
+background-image:url(http://cdn.cavernoftime.com/images/horde-icon.gif);
+background-position:6px 5px;
+background-repeat:no-repeat;
+}
+
+div.qSearch-ico-cata {
+background-image:url(http://cdn.cavernoftime.com/images/cata.gif);
+background-position:3px 3px;
+background-repeat:no-repeat;
+}
+
+div.qSearch-ico-wotlk {
+background-image:url(http://cdn.cavernoftime.com/images/wotlk.gif);
+background-position:3px 3px;
+background-repeat:no-repeat;
+}
+
+.conText {
+color:#ccc;
+line-height:1.4em;
+}
+
+.conText ul,.conText ol,.comment-body ul,.comment-body ol {
+padding-left:26px;
+margin:1em 0;
+}
+
+.conText ol li,.comment-body ol li {
+color:#000;
+}
+
+.conText ul li,.infobox li,.comment-body ul li {
+color:#09F;
+list-style-type:square;
+}
+
+.conText li,.comment-body li {
+list-style-position:outside;
+line-height:1.75em;
+}
+
+.conText ul.last,.conText ol.last {
+margin-bottom:0;
+}
+
+.conText h1 {
+color:#9cc;
+font-size:20px;
+font-weight:400;
+border-bottom:1px solid #1b3a4d;
+line-height:1.1em;
+margin:0 0 13px;
+padding:0 0 5px;
+}
+
+.conText h2 {
+color:#9cc;
+font-size:14px;
+font-weight:400;
+border-bottom:1px solid #1b3a4d;
+line-height:1.25em;
+clear:both;
+margin:0 0 13px;
+padding:26px 0 3px;
+}
+
+.conText h3,.comment-body h3,.forums-post-body h3 {
+color:#FFF;
+font-size:14px;
+margin:1.5em 0 .5em;
+padding:0;
+}
+
+.conText h1.first,.conText h2.first,.conText h3.first {
+padding-top:0;
+margin-top:0;
+}
+
+.conText h1 span.sub,.conText h2 span.sub,.conText h3 span.sub {
+display:block;
+font-weight:400;
+font-size:12px;
+color:#909090;
+}
+
+.infoBox {
+color:#FFF;
+float:right;
+border-collapse:collapse;
+background-color:#142c3a;
+border:1px solid #1b3c50;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+margin:0 0 10px 10px;
+}
+
+.infoBox-spacer {
+width:174px;
+height:1px;
+background-color:#1b3c50;
+}
+
+.infoBox th {
+color:#FFF;
+font-size:14px;
+text-align:center;
+font-weight:700;
+padding:11px 12px;
+}
+
+.infoBox td {
+font-size:13px;
+line-height:1.75em;
+white-space:nowrap;
+padding:0 12px 12px;
+}
+
+.infoBox ul {
+padding-left:13px;
+margin:10px 0;
+}
+
+#infoBox-sticky img {
+margin-bottom:4px;
+}
+
+.minibox {
+float:right;
+background-color:#181818;
+border:1px solid #404040;
+font-size:11px;
+text-align:center;
+margin:0 0 4px 10px;
+padding:8px;
+}
+
+.minibox h3 {
+margin:0 0 5px;
+}
+
+.listview {
+	background-color:#142c3a;
+	clear:both;
+	border-top:1px solid #1e4359;
+	position:relative;
+	margin-bottom:25px;
+}
+
+.listviewWrap {
+	width:967px;
+	position:relative;
+	background-color:#142c3a;
+	border:1px solid #1b3c50;
+	-moz-box-shadow:inset 0 0 1px 1px #000;
+	-webkit-box-shadow:inset 0 0 1px 1px #000;
+	box-shadow:inset 0 0 1px 1px #000;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	margin:0 auto;
+}
+
+.listviewBlock {
+	height:25px;
+	display:block;
+}
+
+.listview-band-top {
+	height:10px;
+	float:right;
+	width:900px;
+	z-index:5;
+	top:-15px;
+	position:relative;
+	margin:-15px 0;
+	padding:10px 44px;
+}
+
+.listview-indicators {
+	position:relative;
+	left:1px;
+}
+
+.indicator {
+	float:left;
+	display:block;
+	background-color:#0e222f;
+	border:1px solid #1b3c50;
+	white-space:nowrap;
+	margin:-4px 5px 10px 0;
+	padding:5px 5px;
+}
+
+.indicator-x {
+	font-size:11px;
+	margin-right:-10px;
+	padding:10px;
+}
+
+.listview-band-top .indicator {
+	background-color:#0e222f;
+	border-color:#1b3c50;
+}
+
+.indicator-mode {
+	display:block;
+	text-align:center;
+	margin:0 auto;
+}
+
+.indicator-mode a {
+	color:#CCC;
+}
+
+.indicator-mode a span {
+	color:#cff;
+}
+
+.indicator-mode b {
+	display:block;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+	font-weight:700;
+}
+
+.listview-note {
+	line-height:16px;
+	width:400px;
+}
+
+.listview-band-bottom {
+	padding:10px 44px;
+}
+
+.listview-band-top input,.listview-band-bottom input,.listview-band-top select,.listview-band-bottom select {
+	font-size:11px;
+	margin-right:.5em;
+}
+
+.listview-qSearch {
+	display:block;
+	position:absolute;
+	right:290px;
+}
+
+.listview-qSearch a {
+	position:absolute;
+	display:block;
+	top:0;
+	right:0;
+	padding:3px 3px 2px 2px;
+}
+
+.listview-qSearch a span {
+	display:block;
+	width:12px;
+	height:12px;
+	background:url(http://cdn.cavernoftime.com/images/search.gif) no-repeat;
+}
+
+.listview-qSearch a:hover span {
+	background-position:0 -12px;
+}
+
+.listview-qSearch em {
+	position:absolute;
+	display:block;
+	right:2px;
+	top:2px;
+	width:13px;
+	height:13px;
+	background:url(http://cdn.cavernoftime.com/images/search4.gif) no-repeat;
+}
+
+.listview-qSearch input {
+border:1px solid #1b3c50;
+height:16px;
+padding-left:2px;
+font-size:11px;
+font-family:Arial,sans-serif;
+background:#0e222f;
+color:#FFF;
+margin:0;
+}
+
+.listview-withselected {
+padding-left:33px;
+background:url(http://cdn.cavernoftime.com/images/listview-withselected.gif) 11px 6px no-repeat;
+}
+
+.listview-withselected2 {
+padding-left:33px;
+background:url(http://cdn.cavernoftime.com/images/listview-withselected.gif) 11px -35px no-repeat;
+}
+
+.listview-nav {
+float:right;
+margin-left:36px;
+}
+
+.listview-nav a,.listview-nav span {
+margin-left:.5em;
+}
+
+.listview th {
+font-size:12px;
+font-weight:700;
+margin:0;
+padding:0;
+}
+
+.listview thead div {
+position:relative;
+display:block;
+height:30px;
+text-decoration:none;
+font-weight:400;
+}
+
+.listview thead a {
+display:block;
+text-decoration:none;
+font-weight:700;
+color:#6da0be;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0e222f',endColorstr='#0a1923',GradientType=0);
+background:linear-gradient(top,#0e222f0%,#0a1923100%);
+-moz-box-shadow:inset 0 -2px 0 #000;
+-webkit-box-shadow:inset 0 -2px 0 #000;
+box-shadow:inset 0 -2px 0 #000;
+padding:8px 10px;
+}
+
+.listview thead a span {
+padding:0 4px;
+}
+
+.listview-mode-default,.listview-mode-div,.listview-mode-tiled {
+background-color:#101c2b;
+width:967px;
+margin:0 auto;
+}
+
+.listview-mode-default td {
+color:#ddd;
+text-align:center;
+padding:6px;
+}
+
+.listview-mode-default tr.odd {
+background-color:#143144;
+border:1px solid #183b52;
+min-height:35px;
+}
+
+.listview-mode-default tr.even {
+background-color:#0f2534;
+border:1px solid #122d3f;
+min-height:35px;
+}
+
+.listview-mode-default .small2 {
+font-size:11px;
+padding-top:3px;
+}
+
+.listview-mode-default .small3 {
+font-size:11px;
+color:#707070;
+}
+
+.listview-mode-default .crop {
+height:1.33333em;
+overflow:hidden;
+line-height:1.2;
+}
+
+.listview tr.checked {
+background-color:#0d1622;
+}
+
+.listview tr.checked:hover {
+background-color:#17293e;
+}
+
+.listview-nodata {
+text-align:center;
+background-color:#0d1622;
+width:945px;
+margin:0 auto;
+padding:10px;
+}
+
+.listview-clip {
+overflow:auto;
+background-color:#000;
+}
+
+.sortasc {
+padding-right:15px!important;
+background:url(http://cdn.cavernoftime.com/images/sort_asc.png) no-repeat right center;
+}
+
+.sortdesc {
+padding-right:15px!important;
+background:url(http://cdn.cavernoftime.com/images/sort_desc.png) no-repeat right center;
+}
+
+.listview-void,a.progressbar:hover del {
+display:none;
+}
+
+.listview table,div.dialog table {
+width:100%;
+border-collapse:collapse;
+}
+
+.listview-mode-default tbody tr,.listview-mode-tiled td,.listview-cb input {
+cursor:pointer;
+}
+
+.listview-mode-default tbody tr:hover,.listview-mode-tiled td:hover,.grid tr:hover {
+background-color:#036;
+}
+
+.listview-mode-tiled td.empty-cell,a.button-red-disabled {
+cursor:default!important;
+}
+
+.listview-aci .comment-indent {
+padding-left:32px;
+}
+
+.tabs a.selected,.tabs a.selected:hover,.old-tabs a.selected,.tabs a.selected:hover,.tabs a:hover,.old-tabs a:hover {
+color:#FFF;
+background-color:#142c3a;
+}
+
+div.dialog {
+font-size:12px;
+background:#303030;
+padding:10px 10px 0;
+}
+
+div.dialog .text {
+background:#181818;
+padding:10px;
+}
+
+div.dialog th {
+text-align:right;
+font-weight:400;
+white-space:nowrap;
+vertical-align:top;
+line-height:24px;
+padding:3px;
+}
+
+div.toolbar button {
+padding-left:2px;
+padding-right:2px;
+margin-right:2px;
+}
+
+div.toolbar img {
+width:16px;
+height:16px;
+background:url(http://cdn.cavernoftime.com/images/toolbar.png) no-repeat;
+}
+
+img.toolbar-b {
+background-position:0 0!important;
+}
+
+img.toolbar-i {
+background-position:-16px 0!important;
+}
+
+img.toolbar-u {
+background-position:-32px 0!important;
+}
+
+img.toolbar-s {
+background-position:-48px 0!important;
+}
+
+img.toolbar-url {
+background-position:-64px 0!important;
+}
+
+img.toolbar-small {
+background-position:-80px 0!important;
+}
+
+img.toolbar-quote {
+background-position:-96px 0!important;
+}
+
+img.toolbar-code {
+background-position:-112px 0!important;
+}
+
+img.toolbar-ul {
+background-position:-128px 0!important;
+}
+
+img.toolbar-ol {
+background-position:-144px 0!important;
+}
+
+img.toolbar-li {
+background-position:-160px 0!important;
+}
+
+.disclosure-on,.disclosure-off {
+	background:url(http://cdn.cavernoftime.com/images/dmenu_arrow.gif) no-repeat left center;
+	padding-left:15px;
+}
+
+a.disclosure-on,a.disclosure-off {
+	color:#FFF;
+	text-decoration:none;
+	font-weight:700;
+	cursor:pointer;
+}
+
+.iconlist,.icontab {
+border-collapse:collapse;
+margin-top:4px;
+}
+
+.iconlist ul li {
+list-style-position:inside;
+list-style-type:square;
+padding-left:5px;
+}
+
+.iconlist td {
+color:#FFF;
+padding:4px 0 6px;
+}
+
+.iconlist var {
+font-size:1px;
+}
+
+.iconlist .iconsmall {
+margin-right:4px;
+}
+
+.icontab th,.icontab td {
+border:0!important;
+}
+
+.icontab td {
+width:10em;
+font-size:12px;
+line-height:1.5em;
+padding:0;
+}
+
+.icontab th {
+padding:0 3px 0 0;
+}
+
+.tabs li {
+float:left;
+margin-right:8px;
+height:30px;
+}
+
+.tabs a {
+float:left;
+color:#6da0be;
+position:relative;
+display:block;
+font-weight:700;
+font-size:11px;
+height:30px;
+text-decoration:none;
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a394b',endColorstr='#142c3a',GradientType=0);
+background:linear-gradient(top,#1a394b0%,#142c3a100%);
+border:2px solid #193749;
+border-top-left-radius:3px;
+border-top-right-radius:3px;
+-moz-border-top-left-radius:3px;
+-moz-border-top-right-radius:3px;
+}
+
+.tabs b {
+display:block;
+visibility:hidden;
+padding:0 5px;
+}
+
+.tabs div {
+position:absolute;
+left:0;
+top:0;
+width:100%;
+text-align:center;
+line-height:30px;
+}
+
+.tabs-container {
+position:relative;
+overflow:hidden;
+}
+
+.tabs-levels {
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+}
+
+.tabs-level {
+position:relative;
+width:100%;
+height:30px;
+overflow:hidden;
+}
+
+.tabs-level ul {
+position:absolute;
+top:55px;
+left:0;
+}
+
+.tabbed-contents {
+border:1px solid #1e4359;
+border-top-width:3px;
+background-color:#0e222f;
+clear:both;
+padding:8px;
+}
+
+.comment-wrapper {
+padding:0 6px 6px;
+}
+
+.comment {
+color:#ddd;
+font-size:13px;
+line-height:1.5em!important;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+padding:0 10px 20px;
+}
+
+.comment0 {
+background-color:#143144;
+}
+
+.comment1 {
+background-color:#0f2534;
+}
+
+.comment2 {
+background:#143144;
+}
+
+.comment-collapsed .comment {
+background:#0f2534;
+padding:0 10px;
+}
+
+.comment-header {
+font-size:11px;
+color:#bbb;
+margin:0;
+padding:8px 2px 16px;
+}
+
+.comment-header var {
+font-style:normal;
+}
+
+.comment-header var a.q0 {
+color:#bbb!important;
+font-weight:400;
+text-decoration:none;
+}
+
+.comment-header em {
+color:#ddd;
+font-style:normal;
+float:right;
+}
+
+.comment-collapsed .comment-header {
+padding:8px 2px;
+}
+
+.comment2 .comment-header {
+color:#888;
+}
+
+.comment-rating {
+float:right;
+color:#FFF;
+padding-left:20px;
+}
+
+.comment-rating b a {
+font-weight:700;
+color:#FFF;
+text-decoration:none;
+}
+
+.comment-rating span a {
+color:#FFD100;
+}
+
+.comment-body,.comment-body-indent {
+overflow:auto;
+}
+
+.comment-bt,.comment-bt ol li div,.comment-bt li div {
+color:#999;
+}
+
+.comment-blue,.comment-blue ol li div,.comment-blue li div,.comment-blue ol li div,div.comment-blue li div {
+color:#00C0FF!important;
+}
+
+.comment-green,.comment-green ol li div,.comment-green li div {
+color:#5DF644!important;
+}
+
+.comment-gold,.comment-gold ol li div,.comment-gold li div {
+color:#D7CEA4!important;
+}
+
+.comment-pink,.comment-pink ol li div,.comment-pink li div {
+color:#F9F!important;
+}
+
+.comment-edit-modes a {
+padding:0 5px;
+}
+
+.comment-edit-buttons {
+padding-top:4px;
+}
+
+.comment-edit-body textarea {
+width:98%;
+height:11em;
+font-family:Arial,sans-serif;
+font-size:16px;
+margin:3px 0;
+}
+
+.comment-lastedit {
+padding-top:4px;
+font-style:italic;
+color:#9d9d9d;
+font-size:11px;
+}
+
+.comment-lastedit a {
+color:#9d9d9d;
+}
+
+.comment-links {
+text-align:right;
+font-size:11px;
+color:#ddd;
+padding:0 2px 2px 0;
+}
+
+.comment-links span,.comment-links span a {
+padding-left:6px;
+}
+
+.comment-markupdoc {
+width:auto;
+border-collapse:collapse;
+background-color:#242424;
+border:2px solid #404040;
+}
+
+.comment-markupdoc th {
+background:#404040;
+text-align:center;
+font-weight:bolder;
+}
+
+.comment-markupdoc tr:hover {
+background-color:#202020;
+}
+
+.comment-markupdoc td,.comment-markupdoc th {
+border-top:1px solid #404040;
+border-bottom:1px solid #404040;
+border-left:1px solid #282828;
+border-right:1px solid #282828;
+padding:4px;
+}
+
+.comment .text .quote {
+background-color:#0C0C0C;
+border-color:#080808;
+}
+
+#tab-comments .listview-mode-div,#tab-english-comments .listview-mode-div {
+padding-top:6px;
+}
+
+.iconsmall,.iconsmall var {
+width:26px;
+height:26px;
+}
+
+.iconmedium,.iconmedium var {
+width:44px;
+height:44px;
+}
+
+.iconsmall-socket-meta-empty ins,.iconmedium-socket-meta-empty ins,.iconsmall a:hover,.iconmedium a:hover,.iconlarge a:hover {
+background-position:0 0;
+}
+
+.iconsmall-socket-yellow-empty ins,.iconmedium-socket-red-empty ins {
+background-position:-36px 0;
+}
+
+.iconsmall-socket-prismatic-empty ins,.iconmedium-socket-yellow-empty ins {
+background-position:-72px 0;
+}
+
+.iconmedium del,.tooltip p div {
+width:44px;
+height:44px;
+background-image:url(http://cdn.cavernoftime.com/images/icon_border_medium.png);
+}
+
+.icontiny {
+padding-left:18px;
+background:left center no-repeat;
+}
+
+.icontinyr {
+padding-right:18px;
+background:right center no-repeat;
+}
+
+.iconsmall,.iconmedium,.iconlarge {
+position:relative;
+z-index:0;
+}
+
+.iconlarge {
+width:68px;
+height:68px;
+}
+
+.iconsmall ins,.iconmedium ins,.iconlarge ins {
+display:block;
+position:absolute;
+z-index:5;
+background-repeat:no-repeat;
+}
+
+.iconsmall ins {
+width:18px;
+height:18px;
+left:4px;
+top:4px;
+}
+
+.iconmedium ins {
+width:36px;
+height:36px;
+left:4px;
+top:4px;
+}
+
+.iconlarge ins {
+width:56px;
+height:56px;
+left:6px;
+top:6px;
+}
+
+.iconsmall-socket-meta-empty ins,.iconsmall-socket-yellow-empty ins,.iconsmall-socket-red-empty ins,.iconsmall-socket-blue-empty ins,.iconsmall-socket-prismatic-empty ins {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_background.jpg);
+}
+
+.iconsmall-socket-red-empty ins {
+background-position:-18px 0;
+}
+
+.iconsmall-socket-blue-empty ins {
+background-position:-54px 0;
+}
+
+.iconmedium-socket-meta-empty ins,.iconmedium-socket-yellow-empty ins,.iconmedium-socket-red-empty ins,.iconmedium-socket-blue-empty ins,.iconmedium-socket-prismatic-empty ins {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_background.jpg);
+}
+
+.iconmedium-socket-blue-empty ins {
+background-position:-108px 0;
+}
+
+.iconmedium-socket-prismatic-empty ins {
+background-position:-144px 0;
+}
+
+.iconsmall var,.iconmedium var {
+display:block;
+position:absolute;
+z-index:15;
+background-repeat:no-repeat;
+}
+
+.iconsmall-socket-meta var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_anim_meta.gif);
+}
+
+.iconsmall-socket-yellow var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_anim_yellow.gif);
+}
+
+.iconsmall-socket-red var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_anim_red.gif);
+}
+
+.iconsmall-socket-blue var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_anim_blue.gif);
+}
+
+.iconsmall-socket-prismatic var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_anim_prismatic.gif);
+}
+
+.iconmedium-socket-meta var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_anim_meta.gif);
+}
+
+.iconmedium-socket-yellow var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_anim_yellow.gif);
+}
+
+.iconmedium-socket-red var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_anim_red.gif);
+}
+
+.iconmedium-socket-blue var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_anim_blue.gif);
+}
+
+.iconmedium-socket-prismatic var {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_anim_prismatic.gif);
+}
+
+.iconsmall del,.iconmedium del,.iconlarge del {
+display:block;
+position:absolute;
+left:0;
+top:0;
+z-index:10;
+background-repeat:no-repeat;
+}
+
+.iconsmall del {
+width:26px;
+height:26px;
+background-image:url(http://cdn.cavernoftime.com/images/icon_border_small.png);
+}
+
+.iconlarge del {
+width:68px;
+height:68px;
+background-image:url(http://cdn.cavernoftime.com/images/icon_border_large.png);
+}
+
+.iconsmall-socket-meta del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_meta1.png);
+}
+
+.iconsmall-socket-meta-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_meta0.png);
+}
+
+.iconsmall-socket-red del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_red1.png);
+}
+
+.iconsmall-socket-red-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_red0.png);
+}
+
+.iconsmall-socket-yellow del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_yellow1.png);
+}
+
+.iconsmall-socket-yellow-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_yellow0.png);
+}
+
+.iconsmall-socket-blue del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_blue1.png);
+}
+
+.iconsmall-socket-blue-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_blue0.png);
+}
+
+.iconsmall-socket-prismatic del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_prismatic1.png);
+}
+
+.iconsmall-socket-prismatic-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/small/socket_prismatic0.png);
+}
+
+.iconmedium-socket-meta del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_meta1.png);
+}
+
+.iconmedium-socket-meta-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_meta0.png);
+}
+
+.iconmedium-socket-red del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_red1.png);
+}
+
+.iconmedium-socket-red-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_red0.png);
+}
+
+.iconmedium-socket-yellow del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_yellow1.png);
+}
+
+.iconmedium-socket-yellow-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_yellow0.png);
+}
+
+.iconmedium-socket-blue del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_blue1.png);
+}
+
+.iconmedium-socket-blue-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_blue0.png);
+}
+
+.iconmedium-socket-prismatic del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_prismatic1.png);
+}
+
+.iconmedium-socket-prismatic-empty del {
+background-image:url(http://cdn.cavernoftime.com/images/sockets/medium/socket_prismatic0.png);
+}
+
+.iconsmall a,.iconmedium a,.iconlarge a {
+display:block;
+position:absolute;
+left:3px;
+top:3px;
+z-index:20;
+}
+
+.iconsmall .glow,.iconmedium .glow,.iconlarge .glow {
+z-index:15;
+font-weight:700;
+cursor:default;
+line-height:normal;
+}
+
+.iconsmall .glow {
+font-size:11px;
+margin:2px 5px 2px 4px;
+}
+
+.iconmedium .glow {
+font-size:13px;
+margin:4px 6px;
+}
+
+.iconlarge .glow {
+font-size:18px;
+margin:4px 6px;
+}
+
+.iconsmall a {
+width:20px;
+height:20px;
+background:url(http://cdn.cavernoftime.com/images/icon_hilite_small.png) no-repeat 20px 0;
+}
+
+.iconmedium a {
+width:38px;
+height:38px;
+background:url(http://cdn.cavernoftime.com/images/icon_hilite_medium_glow.png) no-repeat 38px 0;
+}
+
+.iconlarge a {
+width:62px;
+height:62px;
+background:url(http://cdn.cavernoftime.com/images/icon_border_large.png) no-repeat 62px 0;
+}
+
+.alliance-icon {
+padding-left:12px;
+background:url(http://cdn.cavernoftime.com/images/alliance-icon.gif) left center no-repeat;
+}
+
+.horde-icon {
+padding-left:18px;
+background:url(http://cdn.cavernoftime.com/images/horde-icon.gif) left center no-repeat;
+}
+
+.boss-icon {
+padding-left:15px!important;
+background:url(http://cdn.cavernoftime.com/images/boss.gif) left center no-repeat;
+}
+
+.boss-padded-icon {
+padding-left:23px!important;
+background:url(http://cdn.cavernoftime.com/images/boss.gif) 6px center no-repeat;
+}
+
+.quest-start-icon {
+background:url(http://cdn.cavernoftime.com/images/quest/quest_start.gif) left center no-repeat;
+}
+
+.quest-end-icon {
+background:url(http://cdn.cavernoftime.com/images/quest/quest_end.gif) left center no-repeat;
+}
+
+.quest-daily-start-icon {
+background:url(http://cdn.cavernoftime.com/images/quest/quest_start_daily.gif) left center no-repeat;
+}
+
+.quest-daily-end-icon {
+background:url(http://cdn.cavernoftime.com/images/quest/quest_end_daily.gif) left center no-repeat;
+}
+
+.tooltip {
+visibility:hidden;
+z-index:10000000;
+}
+
+.tooltip table {
+border-spacing:0;
+border-collapse:collapse;
+}
+
+.tooltip td,.tooltip th {
+background:url(http://cdn.cavernoftime.com/tooltip/tooltip.png);
+font-family:Verdana,sans-serif;
+font-size:11px;
+line-height:17px;
+color:#FFF;
+}
+
+.tooltip td {
+vertical-align:top;
+padding:8px 4px 1px 9px;
+}
+
+.tooltip b {
+font-size:14px;
+line-height:19px;
+font-weight:400;
+}
+
+.tooltip div.indent {
+padding-left:.6em;
+}
+
+.tooltip td th,.tooltip td td {
+background:none;
+}
+
+.tooltip td th {
+text-align:right;
+font-weight:400;
+padding:0 0 0 4em;
+}
+
+.tooltip p {
+position:absolute;
+left:-44px;
+top:-1px;
+width:44px;
+height:44px;
+background:4px 4px no-repeat;
+margin:0;
+padding:0;
+}
+
+.tooltip table.shrink b {
+font-size:12px;
+line-height:15px;
+}
+
+.tooltip table.shrink td,.tooltip table.shrink th {
+font-size:10px;
+line-height:14px;
+}
+
+.tooltip .tr1 {
+    color:#ff80ff;
+}
+
+div.screenshotviewer-screen {
+	background-color: black;
+	position: relative;
+	text-align: center;
+}
+
+div.screenshotviewer-screen a {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	height: 100%;
+}
+
+a.screenshotviewer-prev {
+	left: 0;
+	width: 50%;
+}
+
+a.screenshotviewer-next {
+	left: 50.5%;
+	width: 50%;
+}
+
+a.screenshotviewer-cover {
+	left: 0;
+	width: 100%;
+}
+
+div.screenshotviewer-screen a span {
+	display: none;
+	position: absolute;
+	top: 10%;
+	padding: 10px;
+	background-color: #303030;
+}
+
+div.screenshotviewer-screen a:hover span {
+	display: block;
+}
+
+a.screenshotviewer-next span {
+	right: 0;
+}
+
+a.screenshotviewer-cover span {
+	position: static !important;
+	margin: 0 auto;
+}
+
+div.screenshotviewer-from {
+	padding-top: 10px;
+	font-size: 11px;
+	color: #ccc;
+}
+
+div.screenshotviewer-caption {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 5px 0 10px;
+}
+
+.socket-meta {
+padding-left:26px;
+background:url(http://cdn.cavernoftime.com/images/socket_meta.gif) no-repeat left center;
+}
+
+.socket-red {
+padding-left:26px;
+background:url(http://cdn.cavernoftime.com/images/socket_red.gif) no-repeat left center;
+}
+
+.socket-yellow {
+padding-left:26px;
+background:url(http://cdn.cavernoftime.com/images/socket_yellow.gif) no-repeat left center;
+}
+
+.socket-blue {
+padding-left:26px;
+background:url(http://cdn.cavernoftime.com/images/socket_blue.gif) no-repeat left center;
+}
+
+.socket-prismatic {
+padding-left:26px;
+background:url(http://cdn.cavernoftime.com/images/socket_prismatic.gif) no-repeat left center;
+}
+
+a.moneyitem,a.moneysocketmeta,a.moneysocketred,a.moneysocketyellow,a.moneysocketblue {
+text-decoration:none!important;
+border-bottom:1px solid transparent;
+}
+
+a.moneyitem:hover,a.moneysocketmeta:hover,a.moneysocketred:hover,a.moneysocketyellow:hover,a.moneysocketblue:hover {
+border-bottom:1px solid #FFF;
+}
+
+.moneyitem,.moneygold,.moneysilver,.moneycopper,.moneyalliance,.moneyhorde,.moneyarena,.moneyachievement,.moneysocketmeta,.moneysocketred,.moneysocketyellow,.moneysocketblue {
+color:#FFF;
+background:no-repeat right center;
+}
+
+.moneyitem {
+padding-right:18px;
+}
+
+.moneygold {
+padding-right:15px;
+background-image:url(http://cdn.cavernoftime.com/images/money_gold.gif);
+}
+
+.moneysilver {
+padding-right:15px;
+background-image:url(http://cdn.cavernoftime.com/images/money_silver.gif);
+}
+
+.moneycopper {
+padding-right:15px;
+background-image:url(http://cdn.cavernoftime.com/images/money_copper.gif);
+}
+
+.moneyalliance {
+padding-right:12px;
+background-image:url(http://cdn.cavernoftime.com/images/money_alliance.gif);
+}
+
+.moneyhorde {
+padding-right:17px;
+background-image:url(http://cdn.cavernoftime.com/images/money_horde.gif);
+}
+
+.moneyarena {
+padding-right:18px;
+background-image:url(http://cdn.cavernoftime.com/images/money_arena.gif);
+}
+
+.moneyachievement {
+padding-right:13px;
+background-image:url(http://cdn.cavernoftime.com/images/money_achievement.gif);
+}
+
+.moneysocketmeta {
+padding-right:18px;
+background-image:url(http://cdn.cavernoftime.com/images/socket_meta.gif);
+}
+
+.moneysocketred {
+padding-right:18px;
+background-image:url(http://cdn.cavernoftime.com/images/socket_red.gif);
+}
+
+.moneysocketyellow {
+padding-right:18px;
+background-image:url(http://cdn.cavernoftime.com/images/socket_yellow.gif);
+}
+
+.moneysocketblue {
+padding-right:18px;
+background-image:url(http://cdn.cavernoftime.com/images/socket_blue.gif);
+}
+
+.q {
+color:#ffd100!important;
+}
+
+.q0,.q0 a {
+color:#9d9d9d!important;
+}
+
+.q1,.q1 a {
+color:#fff!important;
+}
+
+.q2,.q2 a {
+color:#1eff00!important;
+}
+
+.q3,.q3 a {
+color:#0070dd!important;
+}
+
+.q4,.q4 a {
+color:#a335ee!important;
+}
+
+.q5,.q5 a {
+color:#ff8000!important;
+}
+
+.q9,.q9 a {
+color:#71d5ff!important;
+}
+
+.q10,.q10 a {
+color:red!important;
+}
+
+.r1 {
+color:#FF8040!important;
+}
+
+.r2 {
+color:#FF0!important;
+}
+
+.r3 {
+color:#40BF40!important;
+}
+
+.r4 {
+color:gray!important;
+}
+
+
+.c1,.c1 a {
+color:#C69B6D!important;
+}
+
+.c2,.c2 a {
+color:#F48CBA!important;
+}
+
+.c3,.c3 a {
+color:#AAD372!important;
+}
+
+.c4,.c4 a {
+color:#FFF468!important;
+}
+
+.c6,.c6 a {
+color:#C41E3B!important;
+}
+
+.c7,.c7 a {
+color:#2359FF!important;
+}
+
+.c8,.c8 a {
+color:#68CCEF!important;
+}
+
+.c9,.c9 a {
+color:#9382C9!important;
+}
+
+.c11,.c11 a {
+color:#FF7C0A!important;
+}
+
+.mapper {
+position:relative;
+margin-top:10px;
+border:3px solid #404040;
+background-color:#000;
+}
+
+.mapper .pin {
+position:absolute;
+width:1px;
+height:1px;
+font-size:1px;
+z-index:5;
+}
+
+.mapper .pin a {
+position:relative;
+width:11px;
+height:11px;
+left:-5px;
+top:-5px;
+background:url(http://cdn.cavernoftime.com/images/pin-yellow.png) no-repeat;
+display:block;
+}
+
+.mapper-pin,.mapper-pin-1,.mapper-pin-2,.mapper-pin-3,.mapper-pin-4 {
+padding-left:13px;
+background-image:url(http://cdn.cavernoftime.com/images/pin-yellow.png);
+background-repeat:no-repeat;
+background-position:0 50%;
+}
+
+.mapper-pin-1,.mapper .pin-1 a {
+background-image:url(http://cdn.cavernoftime.com/images/pin-green.png);
+}
+
+.mapper-pin-2,.mapper .pin-2 a {
+background-image:url(http://cdn.cavernoftime.com/images/pin-red.png);
+}
+
+.mapper-pin-3,.mapper .pin-3 a {
+background-image:url(http://cdn.cavernoftime.com/images/pin-blue.png);
+}
+
+.mapper-pin-4,.mapper .pin-4 a {
+background-image:url(http://cdn.cavernoftime.com/images/pin-purple.png);
+}
+
+.mapper .pin-start a {
+background-image:url(http://cdn.cavernoftime.com/images/quest/quest-start.png);
+width:9px;
+height:17px;
+left:-4px;
+top:-8px;
+z-index:5;
+}
+
+.mapper .pin-end a {
+background-image:url(http://cdn.cavernoftime.com/images/quest/quest-end.png);
+width:12px;
+height:18px;
+left:-6px;
+top:-9px;
+z-index:5;
+}
+
+.mapper .pin-startend a {
+background-image:url(http://cdn.cavernoftime.com/images/quest/quest-startend.png);
+width:19px;
+height:18px;
+left:-9px;
+top:-9px;
+z-index:5;
+}
+
+.mapper .glow {
+font-size:12px;
+font-weight:700;
+color:#FFF;
+cursor:default;
+white-space:nowrap;
+margin:0 2px;
+}
+
+.mapper-som-button {
+float:left!important;
+margin:0!important;
+}
+
+.mapper-legend {
+float:left;
+display:block;
+background-color:#141414;
+border:1px solid #101010;
+font-size:11px;
+white-space:nowrap;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+margin:-4px 0 0 15px;
+}
+
+.mapper-legend-container {
+padding:4px 8px;
+}
+
+.mapper-legend-pin {
+margin:0 5px;
+}
+
+div.mapviewer-screen {
+background-color:#000;
+position:relative;
+text-align:center;
+}
+
+div.mapviewer-screen a.mapviewer-cover {
+display:block;
+position:absolute;
+z-index:100;
+top:0;
+margin:0 auto;
+}
+
+a.mapviewer-cover {
+text-decoration:none;
+left:325px;
+}
+
+a.mapviewer-cover b {
+text-transform:uppercase;
+text-decoration:none;
+font-size:15px;
+font-family:Tahoma,sans-serif!important;
+font-weight:400;
+display:block;
+height:22px;
+line-height:22px;
+padding-right:24px;
+color:#e0e0e0;
+background:url(http://cdn.cavernoftime.com/images/dialog_icons.gif) right -220px no-repeat;
+}
+
+div.mapviewer-screen a.mapviewer-cover span {
+display:block;
+position:absolute;
+top:10%;
+background-color:#303030;
+padding:10px;
+}
+
+div.mapviewer-screen a.mapviewer-cover:hover span {
+display:inline-block;
+}
+
+a.mapviewer-cover span {
+position:static!important;
+margin:0 auto;
+}
+
+.rCorners tt,.rcorners strong,.rcorners var,.rcorners em {
+display:block;
+position:absolute;
+width:6px;
+height:6px;
+background:url(http://cdn.cavernoftime.com/images/corners.png) no-repeat;
+}
+
+.rCorners tt {
+left:0;
+top:0;
+background-position:top left;
+}
+
+.rCorners strong {
+right:0;
+top:0;
+background-position:top right;
+}
+
+.rCorners var {
+left:0;
+bottom:0;
+background-position:bottom left;
+}
+
+.rCorners em {
+right:0;
+bottom:0;
+background-position:bottom right;
+}
+
+div.lightbox-outer {
+position:fixed;
+left:50%;
+top:50%;
+width:1px;
+height:1px;
+font-size:1px;
+z-index:60;
+}
+
+div.lightbox-inner {
+position:absolute;
+z-index:70;
+}
+
+div.lightbox-overlay {
+position:absolute;
+left:0;
+top:0;
+width:100%;
+background:#000;
+opacity:.8;
+z-index:50;
+}
+
+.grid {
+width:100%;
+clear:both;
+border-collapse:collapse;
+background-color:#011019;
+border:2px solid #369;
+}
+
+.grid td {
+color:#ddd;
+font-size:13px;
+padding:4px;
+}
+
+.grid th {
+vertical-align:top;
+font-weight:400;
+color:#FFF;
+text-align:left;
+white-space:nowrap;
+padding:4px;
+}
+
+.grid td,.grid th {
+border-top:1px solid #369;
+border-bottom:1px solid #369;
+border-left:1px solid #2d5c89;
+border-right:1px solid #2d5c89;
+}
+
+#tc-classes {
+width:946px;
+padding-bottom:10px;
+margin:0 auto;
+}
+
+#tc-classes-inner {
+width:460px;
+text-align:center;
+margin:0 auto;
+}
+
+#tc-classes p {
+font-size:32px;
+margin:0 0 16px;
+padding:0;
+}
+
+#tc-classes .iconmedium {
+float:left;
+margin-right:2px;
+opacity:.6666;
+}
+
+#tc-classes.choose {
+position:relative;
+padding:0;
+}
+
+#tc-classes.choose #tc-classes-outer {
+width:614px;
+}
+
+#tc-classes.choose #tc-classes-inner {
+position:absolute;
+left:77px;
+top:150px;
+}
+
+.talentcalc-sidebar-anchor {
+display:none;
+position:relative;
+}
+
+.talentcalc-sidebar {
+position:absolute;
+top:0;
+background-color:#141414;
+padding:10px;
+}
+
+.talentcalc-sidebar-inner {
+width:1px;
+}
+
+a.talentcalc-button-help,.talentcalc-sidebar-controls a {
+display:block;
+margin-right:10px;
+background:no-repeat left center;
+padding:2px 0 2px 20px;
+}
+
+a.talentcalc-button-help {
+position:absolute;
+right:10px;
+top:10px;
+background-image:url(http://cdn.cavernoftime.com/images/icon16-help.gif);
+margin:0;
+}
+
+a.talentcalc-button-lock {
+float:left;
+background-image:url(http://cdn.cavernoftime.com/images/talent/lock.gif);
+}
+
+a.talentcalc-button-unlock {
+float:left;
+background-position:-110px center;
+background-image:url(http://cdn.cavernoftime.com/images/talent/lock.gif);
+}
+
+a.talentcalc-button-reset {
+float:left;
+padding-left:19px;
+background-image:url(http://cdn.cavernoftime.com/images/talent/clear.gif);
+}
+
+.talentcalc-sidebar-controls2 a {
+margin-right:10px;
+float:left;
+background:no-repeat left center;
+padding:2px 0;
+}
+
+a.talentcalc-button-export {
+padding-left:19px;
+background-image:url(http://cdn.cavernoftime.com/images/talent/link.gif);
+}
+
+.talentcalc-sidebar h3 {
+font-size:14px;
+margin:1.5em 0 .5em;
+padding:0;
+}
+
+.talentcalc-sidebar h3 a {
+font-size:11px;
+margin-left:6px;
+}
+
+.talentcalc-sidebar-majorglyphs,.talentcalc-sidebar-minorglyphs {
+float:left;
+width:150px;
+font-size:11px;
+}
+
+.talentcalc-sidebar .icontab td {
+width:103px;
+}
+
+.talentcalc-sidebar .icontab a {
+text-decoration:none;
+}
+
+.talentcalc-upper {
+background-color:#141414;
+margin-bottom:5px;
+}
+
+.talentcalc-upper-inner {
+font-size:14px;
+padding:6px 8px;
+}
+
+.talentcalc-upper-inner span {
+color:#DDD;
+}
+
+.talentcalc-upper-class {
+float:left;
+}
+
+.talentcalc-upper-ptsleft {
+margin-left:60px;
+float:right;
+}
+
+.talentcalc-upper-ptsleft a {
+font-size:11px;
+font-weight:700;
+margin-left:6px;
+}
+
+.talentcalc-main {
+background-color:#000;
+border:1px solid #404040;
+}
+
+.talentcalc-default .talentcalc-main {
+width:614px;
+height:554px;
+}
+
+.talentcalc-pet .talentcalc-main {
+width:244px;
+height:364px;
+margin-left:185px;
+}
+
+.talentcalc-main table {
+border-collapse:collapse;
+margin:2px;
+}
+
+.talentcalc-default table td {
+width:50px;
+height:50px;
+}
+
+.talentcalc-pet table td {
+width:60px;
+height:60px;
+}
+
+.iconmedium div.icon-border {
+position:absolute;
+z-index:15;
+left:1px;
+top:1px;
+width:42px;
+height:42px;
+background:url(http://cdn.cavernoftime.com/images/talent/border.gif) no-repeat;
+}
+
+.iconmedium div.icon-bubble {
+position:absolute;
+z-index:16;
+width:22px;
+height:23px;
+left:30px;
+top:29px;
+background:url(http://cdn.cavernoftime.com/images/talent/bubble2.png) no-repeat;
+visibility:hidden;
+font-family:Verdana,sans-serif;
+font-size:12px;
+text-align:center;
+cursor:default;
+padding:4px 0 0;
+}
+
+.iconmedium a.bubbly {
+background-image:url(http://cdn.cavernoftime.com/images/talent/icon_hilite_medium_talent.png);
+}
+
+.talentcalc-arrow-anchor {
+position:relative;
+z-index:30;
+}
+
+.talentcalc-arrow {
+position:absolute;
+z-index:30;
+}
+
+.talentcalc-arrow table {
+width:100%;
+height:100%;
+border-collapse:collapse;
+}
+
+.talentcalc-arrow table td,.talentcalc-arrow table th {
+font-size:1px;
+width:auto;
+height:auto;
+}
+
+.talentcalc-arrow-leftdown td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/leftdown.png);
+}
+
+.talentcalc-arrow-leftdown2 td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/leftdown2.png);
+}
+
+.talentcalc-arrow-rightdown td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/rightdown.png);
+}
+
+.talentcalc-arrow-rightdown2 td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/rightdown2.png);
+}
+
+.talentcalc-arrow-right td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/right.png);
+}
+
+.talentcalc-arrow-right2 td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/right2.png);
+}
+
+.talentcalc-arrow-left td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/left.png);
+}
+
+.talentcalc-arrow-left2 td {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/left2.png);
+}
+
+.talentcalc-lower {
+position:relative;
+height:24px;
+margin-top:5px;
+}
+
+.talentcalc-pet .talentcalc-lower {
+width:244px;
+margin-left:185px;
+}
+
+.talentcalc-lower-tree1,.talentcalc-lower-tree2,.talentcalc-lower-tree3 {
+position:absolute;
+top:0;
+}
+
+.talentcalc-default .talentcalc-lower-tree1,.talentcalc-default .talentcalc-lower-tree2,.talentcalc-default .talentcalc-lower-tree3 {
+width:204px;
+}
+
+.talentcalc-pet .talentcalc-lower-tree1,.talentcalc-pet .talentcalc-lower-tree2,.talentcalc-pet .talentcalc-lower-tree3 {
+width:244px;
+}
+
+.talentcalc-lower-tree1 {
+left:1px;
+}
+
+.talentcalc-lower-tree2 {
+left:206px;
+}
+
+.talentcalc-lower-tree3 {
+left:411px;
+}
+
+.talentcalc-lower p {
+background-color:#141414;
+height:24px;
+line-height:24px;
+overflow:hidden;
+text-align:center;
+margin:0 auto;
+padding:0;
+}
+
+.talentcalc-default .talentcalc-lower p {
+width:200px;
+}
+
+.talentcalc-pet .talentcalc-lower p {
+width:238px;
+}
+
+.talentcalc-lower b {
+font-size:13px;
+background:left center no-repeat;
+padding:4px 0 4px 28px;
+}
+
+.talentcalc-pet .talentcalc-lower b {
+padding-left:0;
+}
+
+.talentcalc-lower span {
+font-size:11px;
+color:#DDD;
+}
+
+.talentcalc-lower a {
+display:block;
+position:absolute;
+right:2px;
+top:2px;
+width:20px;
+height:20px;
+opacity:.3333;
+background:url(http://cdn.cavernoftime.com/images/talent/clear.gif) no-repeat 2px 2px;
+}
+
+.talentcalc-glyphpicker {
+font-size:13px;
+width:780px;
+height:554px;
+background-color:#303030;
+border:10px solid #303030;
+border-bottom:0;
+}
+
+.talentcalc-glyphpicker .listview {
+border:0;
+}
+
+.talentcalc-glyphpicker .listview-band-top {
+background-color:#303030;
+}
+
+.talentcalc,.talentcalc-main table td .iconmedium {
+margin:0 auto;
+}
+
+.talentcalc-default,.talentcalc-pet {
+width:946px;
+}
+
+.talentcalc-default .talentcalc-sidebar,.talentcalc-pet .talentcalc-sidebar {
+left:621px;
+}
+
+.talentcalc-default .talentcalc-upper,.talentcalc-pet .talentcalc-upper,.talentcalc-default .talentcalc-lower {
+width:616px;
+}
+
+.talentcalc-arrow-down td,.talentcalc-arrow-leftdown th,.talentcalc-arrow-rightdown th {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/down.png);
+}
+
+.talentcalc-arrow-down2 td,.talentcalc-arrow-leftdown2 th,.talentcalc-arrow-rightdown2 th {
+background-image:url(http://cdn.cavernoftime.com/images/talent/arrows/down2.png);
+}
+
+.book {
+width:41em;
+border:3px solid #0a1923;
+}
+
+.book .header {
+cursor:default;
+text-align:center;
+background-color:#0a1923;
+padding:3px 4px 5px;
+}
+
+.book .previous {
+float:left;
+text-align:left;
+width:33%;
+}
+
+.book .next {
+float:right;
+text-align:right;
+width:33%;
+}
+
+.book .page {
+background-color:#000;
+padding:4px;
+}
+
+.book h1,.book h2 {
+border:0;
+font-weight:700;
+}
+
+.book h1 {
+font-size:16px;
+}
+
+.book h2 {
+font-size:14px;
+}
+
+.inputbox {
+width:30em;
+
+color:#ccc;
+line-height:1.7em;
+background:#1e3e50;
+border:1px solid #2d5c77;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+-moz-box-shadow:-3px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+-webkit-box-shadow:-2px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+box-shadow:-3px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+margin:0 auto;
+padding:15px;
+}
+
+.inputbox td {
+padding:2px;
+}
+
+#inputbox-error {
+color:red;
+font-weight:700;
+font-size:13px;
+padding-bottom:10px;
+text-align:center;
+}
+
+.notebox {
+width:30em;
+line-height:1em;
+text-align:center;
+font-size:12px;
+color:#FFF;
+background:#1e3e50;
+border:1px solid #2d5c77;
+-webkit-border-radius:4px;
+-moz-border-radius:4px;
+border-radius:4px;
+-moz-box-shadow:-3px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+-webkit-box-shadow:-2px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+box-shadow:-3px 0 4px rgba(0,0,0,0.2), 3px 3px 4px rgba(0,0,0,0.5);
+margin:0 auto;
+padding:15px;
+}
+
+.inputbox ul ul {
+padding-left:20px;
+}
+
+.conText pre.code {
+color:#eee;
+margin-top:2px;
+width:700px;
+background-color:#141414;
+border:1px solid #101010;
+line-height:normal;
+font-family:'Courier New',Monaco,Courier,monospace;
+overflow:auto;
+text-align:left;
+white-space:pre-wrap!important;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+padding:10px;
+}
+
+.conText ul,.conText ol {
+margin:1em 0;
+}
+
+.conText ol ul,.conText ol ol,.conText ul ol,.conText ul ul {
+margin-top:0;
+margin-bottom:0;
+}
+
+.conText ul {
+padding-left:24px;
+list-style-type:square;
+}
+
+.conText ol {
+list-style-type:decimal!important;
+color:#E5CC80;
+padding-left:25px;
+}
+
+.conText li {
+list-style-position:outside;
+line-height:2em;
+}
+
+.conText .last {
+margin-bottom:0!important;
+}
+
+.announcement-content .announcement-inner {
+background-color:#142c3a;
+border:1px solid #1b3c50;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+}
+
+.announcement-inner {
+background-position:0 center;
+background-repeat:no-repeat;
+margin-bottom:10px;
+position:relative;
+padding:8px;
+}
+
+.announcement ul {
+margin:.25em 0!important;
+}
+
+.announcement h3 {
+margin-top:0!important;
+margin-bottom:.25em!important;
+}
+
+.announcement li {
+line-height:1.75em!important;
+}
+
+#nos-backg {
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background-color:#000;
+opacity:.8;
+filter:alpha(opacity=80);
+z-index:10000;
+}
+
+#nos-text {
+position:absolute;
+text-align:center;
+left:0;
+width:100%;
+top:30%;
+font-size:18px;
+line-height:1.5em;
+z-index:10000;
+padding-top:70px;
+}
+
+#nos-text b {
+font-size:22px;
+}
+
+.miniBox {
+float:right;
+background-color:#142c3a;
+border:1px solid #1b3c50;
+font-size:11px;
+text-align:center;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+border-radius:6px;
+margin:0 0 4px 10px;
+padding:8px;
+}
+
+.conText .miniBox h2 {
+font-size:11px;
+border:none;
+font-weight:700;
+margin:0 0 5px;
+padding:0;
+}
+
+.conText .miniBox h3,.conText .miniBox h3 a:link,.conText .miniBox h3 a:visited {
+color:#9d9d9d!important;
+font-size:11px;
+font-weight:400;
+margin:0;
+}
+
+.conText .miniBox h3 img {
+vertical-align:middle;
+}
+
+.conText sup,.conText sub {
+font-size:10px!important;
+}
+
+.conText .first {
+margin-top:0!important;
+}
+
+.conText .encounter img {
+vertical-align:text-bottom;
+}
+
+.pad,.talentcalc-sidebar-controls {
+padding-bottom:10px;
+}
+
+#locBox a:selected,a:hover,.menuBtns a.open,.qSearch a:hover,div.qSearch-sel div,.talentcalc-upper-inner b,.conText b,#nos-text a {
+color:#FFF;
+}
+
+.menu p,.tabs,.old-tabs,.iconlist ul {
+position:relative;
+margin:0;
+padding:0;
+}
+
+.conText ul.first,.conText ol.first,.comment-body h3.first,.talentcalc-sidebar h3.first {
+margin-top:0;
+}
+
+.conText h3 small,.infobox th small,.comment-links a,.comment-links a {
+font-weight:400;
+}
+
+.conText .h1-links,.talentcalc-upper-reqlevel {
+float:right;
+}
+
+.infoBox-series,.series {
+border-collapse:collapse;
+line-height:1.5em;
+}
+
+.infoBox-series th,.series th {
+font-weight:400;
+text-align:right;
+vertical-align:top;
+padding:.2em 10px 0 0;
+}
+
+.series td,.infoBox-series td,.iconlist th,.tooltip td td,.listview thead a span span,.tooltip td td,.talentcalc-main table td {
+padding:0;
+}
+
+.minibox-left,.conText .miniBox-left {
+float:left;
+margin-left:0;
+margin-right:10px;
+}
+
+.listview-band-top,.listview-band-bottom,.conText ol li div,.conText li div {
+color:#ccc;
+}
+
+.listview-mode-default .small,.comment-edit-modes,.comment-edit-body {
+font-size:11px;
+}
+
+.comment-header var a,.comment-rating span,.inputbox ul lh {
+font-weight:700;
+}
+
+.comment-header var a.q0:hover,.comment-rating b a:hover,.text .miniBox h2 a:hover,.conText .miniBox h3 a:link,.conText .miniBox h3 a:visited,.conText h1 a.header-link:hover,.conText h2 a.header-link:hover,a.disclosure-on:hover,a.disclosure-off:hover {
+text-decoration:underline;
+}
+
+.comment-rating span a:hover,.conText .miniBox h2 a:link,.conText .miniBox h2 a:visited,.conText h1 a.header-link,.conText h2 a.header-link {
+color:#FFF;
+text-decoration:none;
+}
+
+.q7,.q7 a,.q8,.q8 a {
+color:#ffff98!important;
+}
+
+.c5,.c5 a,.conText .miniBox h2,.conText .miniBox h2 b,.conText .miniBox h2 a:link,.conText .miniBox h2 a:visited,.conText .miniBox h3 a:hover {
+color:#FFF!important;
+}
+
+#tc-classes .iconmedium-gold,#tc-classes.choose .iconmedium,.talentcalc-lower a:hover {
+opacity:1;
+}
+
+.conText ol li,.announcement-inner a {
+color:#09C;
+}
+
+*,.book p {
+margin:0;
+padding:0;
+}
+
+div.dialog td,.tooltip th {
+vertical-align:top;
+padding:3px;
+}
+
+.icon-cata {
+	width:40px;
+	height:13px;
+	background:url(http://cdn.cavernoftime.com/images/cata.gif) no-repeat center;
+}
+
+.icon-wotlk { 
+	width:40px;
+	height:13px;
+	background:url(http://cdn.cavernoftime.com/images/wotlk.gif) no-repeat center;
+}
+
+.icon-tbc {
+	width:40px;
+	height:13px;
+	background:url(http://cdn.cavernoftime.com/images/bc.gif) no-repeat center;
+}
+
+/* Screenshot */
+.screenshot-cell {
+	cursor: pointer;
+	padding: 10px 4px;
+	text-align: center;
+}
+
+.screenshot-cell img {
+	border: 3px solid #404040;
+	margin-bottom: 3px;
+}
+
+.screenshot-cell-user {
+	width: 100%;
+	overflow: hidden;
+	font-size: 11px;
+	padding-bottom: 5px;
+	color: #ccc;
+}
+
+.screenshot-caption,.screenshot-caption-over {
+	width: 100%;
+	position: absolute;
+	line-height: 18px;
+}
+
+.screenshot-caption {
+	overflow: hidden;
+	height: 1.33333em;
+	padding: 1px;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}
+
+.screenshot-caption-over {
+	color: white;
+	background-color: #505050;
+	border: 1px solid #303030;
+	padding: 0;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.screenshot-caption span,.screenshot-caption-over span {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/* TOPLIST */
+.tl-sR {
+	border:1px solid #1f3e51;
+	background: #142d3b;
+	background: -moz-linear-gradient(top, #122937 0%, #0e222e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#122937), color-stop(100%,#0e222e));
+	background: -webkit-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -o-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -ms-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: linear-gradient(top, #122937 0%,#0e222e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#122937', endColorstr='#0e222e',GradientType=0 );
+	-moz-box-shadow: 0 0 2px 1px #000;
+	-webkit-box-shadow: 0 0 2px 1px #000;
+	box-shadow: 0 0 2px 1px #000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	width:209px;
+	float:right;
+}
+
+.tl-page {
+	width:965px;
+	margin:0 auto;
+	border:1px solid #1f3e51;
+	background: #142d3b;
+	background: -moz-linear-gradient(top, #122937 0%, #0e222e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#122937), color-stop(100%,#0e222e));
+	background: -webkit-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -o-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -ms-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: linear-gradient(top, #122937 0%,#0e222e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#122937', endColorstr='#0e222e',GradientType=0 );
+	-moz-box-shadow: 0 0 10px 0 #000;
+	-webkit-box-shadow: 0 0 10px 0 #000;
+	box-shadow: 0 0 10px 0 #000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.tl-content {
+	width:945px;
+	border-top:1px solid #1f3e51;
+	margin:0 auto;
+}
+
+.tl-inner {
+	width:910px;
+	margin:10px auto;	
+}
+
+.tl-sadd-l {
+	float:left;
+	width:490px;
+}
+
+.tl-sadd-r {
+	float:left;
+	width:410px;
+}
+
+.tl-sadd-c {
+	float:left;
+	background:url(http://cdn.cavernoftime.com/images/toplist/divider.png) no-repeat;
+	margin-top:45px;
+	margin-bottom:25px;
+	height:300px;
+	width:44px;
+}
+
+.tl-input {
+	width:300px;
+	height:25px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #bfbfbf 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#bfbfbf));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfbfbf',GradientType=0 );
+}
+
+.tl-input input, .tl-textarea textarea {
+	border:0;
+	width:290px;
+	background:none;
+	font-size:14px;
+	padding:4px;
+}
+
+.tl-input select {
+	border:0;
+	width:301px;
+	background-color:#fff;
+	font-size:14px;
+	padding:4px;
+}	
+
+.tl-textarea {
+	width:300px;
+	height:85px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #bfbfbf 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#bfbfbf));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	background: linear-gradient(top, #ffffff 0%,#bfbfbf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bfbfbf',GradientType=0 );
+}
+
+.tl-success {
+	margin:45px auto;
+	color:#73b2db;
+	text-align:center;
+	width:100%;
+}
+		
+.tl-iInner {
+	margin:10px;
+	font-size:11px;
+}
+
+.tl-iLeft {
+	float:left;
+	width:85px;
+	height:18px;
+	font-weight:bold;
+	color:#73b2db;
+}
+
+.tl-iRight {
+	float:right;
+	width:102px;
+	height:18px;
+	font-weight:bold;
+	color:#73b2db;
+}
+
+.tl-iBot {
+	float:left;
+	width:180px;
+	height:18px;
+	font-weight:bold;
+	color:#73b2db;
+}
+
+.tl-iVal {
+	font-weight:normal;
+	color:#ffffff;
+}
+
+.tl-cTitle a, .tl-sTitle a {
+	color:#abd6f2;
+	text-decoration:none;
+}
+
+.tl-cTitle a:hover, .tl-sTitle a:hover  {
+	color:#fff;
+}
+
+.tl-cTitle a, .tl-cTitle p {
+	font-family:'Times New Roman', Times, Arial;
+	font-size:20px;
+	color:#abd6f2;
+	text-decoration:none;
+}
+
+.tl-cTitle a:hover {
+	color:#fff;
+}
+
+.tl-Pagination {
+	width:700px;
+	height:26px;
+	margin:0 auto;
+}
+.tl-PageInfo {
+	margin:0 auto;
+	width:700px;
+	height:26px;
+	text-align:center;
+	color:#385263;
+	font-weight:bold;
+	font-size:12px;
+}
+.tl-PageInfo .active {
+	color:#cdebff;
+}
+
+.tl-lContainer {
+	width:694px;
+	margin:0 auto;
+	position:relative;
+}
+
+.tl-lWrap {
+	width:644px;
+	height:174px;
+	float:right;
+	border:1px solid #1f3e51;
+	margin-bottom:15px;
+	background: #142d3b;
+	background: -moz-linear-gradient(top, #122937 0%, #0e222e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#122937), color-stop(100%,#0e222e));
+	background: -webkit-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -o-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: -ms-linear-gradient(top, #122937 0%,#0e222e 100%);
+	background: linear-gradient(top, #122937 0%,#0e222e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#122937', endColorstr='#0e222e',GradientType=0 );
+	-moz-box-shadow: 0 0 10px 0 #000;
+	-webkit-box-shadow: 0 0 10px 0 #000;
+	box-shadow: 0 0 10px 0 #000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+
+.tl-lInner {
+	padding:10px;
+	width:620px;
+	padding-top:12px;
+}
+
+
+.tl-lBanner {
+	-moz-box-shadow: 0 2px 10px 2px #000;
+	-webkit-box-shadow: 0 2px 10px 2px #000;
+	box-shadow: 0 2px 10px 2px #000;
+	width:468px;
+	height:60px;
+	cursor:pointer;
+}
+
+.tl-pad3 {
+	height:30px;
+}
+
+.tl-lPane {
+	float:left;
+	width:40px;
+	height:174px;
+}
+
+.tl-lRankBox {
+	margin-top:79px;
+	text-align:center;
+}
+
+.tl-lRankBox span {
+	font-family:'Times New Roman', Times, Arial;
+	font-size:20px;
+	color:#fff;
+}
+
+.tl-lLeftWrap {
+	float:left;
+	width:488px;
+	height:155px;
+}
+
+.tl-lTitle {
+	margin:10px 0;
+	height:25px;
+	width:468px;
+	color:#9dd6f2;
+	font-size:15px;
+}
+
+.tl-lTitle p {
+	margin:9px 0;
+	float:left;
+}
+
+.tl-lTitleS {
+	margin:10px 0;
+	height:25px;
+	width:468px;
+	color:#9dd6f2;
+	font-size:15px;
+	cursor:pointer;
+}
+
+.tl-lTitleS:hover {
+	color:#fff;
+}
+
+.tl-lTitleS p {
+	margin:9px 0;
+	float:left;
+}
+
+.tl-lTitleS .versions {
+	float:left;
+	margin:12px 10px;
+}
+
+.tl-lTitleS .versions div {
+	float:left;
+}
+
+.tl-lDescription {
+	margin:13px 0;
+	color:#5394b5;
+	width:468px;
+}
+
+.tl-lRightWrap {
+	float:left;
+	width:125px;
+	height:155px;
+}
+
+.tl-lRightInfo {
+	height:60px;
+}
+
+.tl-lRightInfo .title {
+	font-size:12px;
+	font-weight:bold;
+	color:#51b2db;
+	line-height:18px;
+	width:73px;
+}
+
+.tl-lRightInfo .value {
+	font-size:11px;
+	font-weight:bold;
+	color:#fff;
+}
+
+.tl-lTrailer, .tl-lComments { 
+	width:132px;
+	float:none;
+	height:34px;
+	margin-top:10px;
+	text-align:center;
+	cursor:pointer;
+	border-radius:2px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;	
+}
+
+.tl-lTrailer p, .tl-lComments p {
+	margin:10px 0;
+	color:#73b2db;
+}
+
+.tl-PaginationWrap {
+	width:694px;
+	margin:10px auto;
+}
+
+.tl-removeServer {
+	border:1px solid #2d5c77;
+	-moz-box-shadow: 0 0 2px 1px #000;
+	-webkit-box-shadow: 0 0 2px 1px #000;
+	box-shadow: 0 0 2px 1px #000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	width:120px;
+	height:30px;
+	background:#1e3e50;
+	background-color:#1e3e50;
+	text-align:center;
+	cursor:pointer;
+	float:right;
+	margin:-18px 10px;
+}
+
+.tl-removeServer p {
+	margin:8px auto;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+}
+
+.tl-listingBtn {
+	border:1px solid #2d5c77;
+	-moz-box-shadow: 0 0 2px 1px #000;
+	-webkit-box-shadow: 0 0 2px 1px #000;
+	box-shadow: 0 0 2px 1px #000;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	width:180px;
+	height:30px;
+	background:#1e3e50;
+	text-align:center;
+	cursor:pointer;
+}
+
+.tl-listingBtn p {
+	margin:8px auto;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+}
+
+div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top .pp_left,div.pp_default .pp_top .pp_right,div.pp_default .pp_bottom,div.pp_default .pp_bottom .pp_left,div.pp_default .pp_bottom .pp_middle,div.pp_default .pp_bottom .pp_right{height:13px}div.dark_rounded .pp_top .pp_left{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -88px -53px no-repeat}div.dark_rounded .pp_top .pp_right{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -110px -53px no-repeat}div.dark_rounded .pp_content_container .pp_left{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/contentPattern.png) top left repeat-y}div.dark_rounded .pp_content_container .pp_right{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/contentPattern.png) top right repeat-y}div.dark_rounded .pp_next:hover{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/btnNext.png) center right no-repeat;cursor:pointer}div.dark_rounded .pp_previous:hover{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/btnPrevious.png) center left no-repeat;cursor:pointer}div.dark_rounded .pp_expand{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -31px -26px no-repeat;cursor:pointer}div.dark_rounded .pp_expand:hover{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -31px -47px no-repeat;cursor:pointer}div.dark_rounded .pp_contract{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) 0 -26px no-repeat;cursor:pointer}div.dark_rounded .pp_contract:hover{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) 0 -47px no-repeat;cursor:pointer}div.dark_rounded .pp_close{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -1px -1px no-repeat;cursor:pointer;height:22px;width:75px}div.dark_rounded .pp_description{color:#fff;margin-right:85px}div.dark_rounded .pp_nav .pp_play{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -1px -100px no-repeat;height:15px;width:14px}div.dark_rounded .pp_nav .pp_pause{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -24px -100px no-repeat;height:15px;width:14px}div.dark_rounded .pp_arrow_previous{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) 0 -71px no-repeat}div.dark_rounded .pp_arrow_next{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -22px -71px no-repeat}div.dark_rounded .pp_bottom .pp_left{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -88px -80px no-repeat}div.dark_rounded .pp_bottom .pp_right{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/sprite.png) -110px -80px no-repeat}div.dark_rounded .pp_loaderIcon{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/loader.gif) center center no-repeat}div.pp_pic_holder a:focus{outline:none}div.pp_overlay{background:#000;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500}div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}.pp_content{height:40px;min-width:40px}* html .pp_content{width:40px}.pp_content_container{position:relative;text-align:left;width:100%}.pp_content_container .pp_left{padding-left:20px}.pp_content_container .pp_right{padding-right:20px}.pp_content_container .pp_details{float:left;margin:10px 0 2px}.pp_description{display:none;margin:0}.pp_social{float:left;margin:0}.pp_social .facebook{float:left;margin-left:5px;overflow:hidden;width:55px}.pp_social .twitter{float:left}.pp_nav{clear:right;float:left;margin:3px 10px 0 0}.pp_nav p{float:left;white-space:nowrap;margin:2px 4px}.pp_nav .pp_play,.pp_nav .pp_pause{float:left;margin-right:4px;text-indent:-10000px}a.pp_arrow_previous,a.pp_arrow_next{display:block;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}.pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000}.pp_gallery{display:none;left:50%;margin-top:-50px;position:absolute;z-index:10000}.pp_gallery div{float:left;overflow:hidden;position:relative}.pp_gallery ul{float:left;height:35px;position:relative;white-space:nowrap;margin:0 0 0 5px;padding:0}.pp_gallery ul a{border:1px rgba(0,0,0,0.5) solid;display:block;float:left;height:33px;overflow:hidden}.pp_gallery ul a img{border:0}.pp_gallery li{display:block;float:left;margin:0 5px 0 0;padding:0}.pp_gallery li.default a{background:url(http://cdn.cavernoftime.com/images/pp/facebook/default_thumbnail.gif) 0 0 no-repeat;display:block;height:33px;width:50px}.pp_gallery .pp_arrow_previous,.pp_gallery .pp_arrow_next{margin-top:7px!important}a.pp_next{background:url(http://cdn.cavernoftime.com/images/pp/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%}a.pp_previous{background:url(http://cdn.cavernoftime.com/images/pp/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:left;height:100%;text-indent:-10000px;width:49%}a.pp_expand,a.pp_contract{cursor:pointer;display:none;height:20px;position:absolute;right:30px;text-indent:-10000px;top:10px;width:20px;z-index:20000}a.pp_close{display:block;line-height:22px;position:absolute;right:0;text-indent:-10000px;top:0}.pp_loaderIcon{display:block;height:24px;left:50%;position:absolute;top:50%;width:24px;margin:-12px 0 0 -12px}#pp_full_res{line-height:1!important}#pp_full_res .pp_inline{text-align:left}#pp_full_res .pp_inline p{margin:0 0 15px}div.ppt{color:#fff;display:none;font-size:17px;z-index:9999;margin:0 0 5px 15px}div.pp_default .pp_content,div.light_rounded .pp_content{background-color:#fff}div.pp_default #pp_full_res .pp_inline,div.light_rounded .pp_content .ppt,div.light_rounded #pp_full_res .pp_inline,div.light_square .pp_content .ppt,div.light_square #pp_full_res .pp_inline,div.facebook .pp_content .ppt,div.facebook #pp_full_res .pp_inline{color:#000}div.pp_default .pp_gallery ul li a:hover,div.pp_default .pp_gallery ul li.selected a,.pp_gallery ul a:hover,.pp_gallery li.selected a{border-color:#fff}div.pp_default .pp_details,div.light_rounded .pp_details,div.dark_rounded .pp_details,div.dark_square .pp_details,div.light_square .pp_details,div.facebook .pp_details{position:relative}div.light_rounded .pp_top .pp_middle,div.light_rounded .pp_content_container .pp_left,div.light_rounded .pp_content_container .pp_right,div.light_rounded .pp_bottom .pp_middle,div.light_square .pp_left,div.light_square .pp_middle,div.light_square .pp_right,div.light_square .pp_content,div.facebook .pp_content{background:#fff}div.light_rounded .pp_description,div.light_square .pp_description{margin-right:85px}div.light_rounded .pp_gallery a.pp_arrow_previous,div.light_rounded .pp_gallery a.pp_arrow_next,div.dark_rounded .pp_gallery a.pp_arrow_previous,div.dark_rounded .pp_gallery a.pp_arrow_next,div.dark_square .pp_gallery a.pp_arrow_previous,div.dark_square .pp_gallery a.pp_arrow_next,div.light_square .pp_gallery a.pp_arrow_previous,div.light_square .pp_gallery a.pp_arrow_next{margin-top:12px!important}div.light_rounded .pp_arrow_previous.disabled,div.dark_rounded .pp_arrow_previous.disabled,div.dark_square .pp_arrow_previous.disabled,div.light_square .pp_arrow_previous.disabled{background-position:0 -87px;cursor:default}div.light_rounded .pp_arrow_next.disabled,div.dark_rounded .pp_arrow_next.disabled,div.dark_square .pp_arrow_next.disabled,div.light_square .pp_arrow_next.disabled{background-position:-22px -87px;cursor:default}div.light_rounded .pp_loaderIcon,div.light_square .pp_loaderIcon{background:url(http://cdn.cavernoftime.com/images/pp/light_rounded/loader.gif) center center no-repeat}div.dark_rounded .pp_top .pp_middle,div.dark_rounded .pp_content,div.dark_rounded .pp_bottom .pp_middle{background:url(http://cdn.cavernoftime.com/images/pp/dark_rounded/contentPattern.png) top left repeat}div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder{color:#c4c4c4}div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#fff}.pp_top,.pp_bottom{height:20px;position:relative}* html .pp_top,* html .pp_bottom{padding:0 20px}.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:20px}.pp_top .pp_middle,.pp_bottom .pp_middle{height:20px;left:20px;position:absolute;right:20px}* html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}.pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}.pp_fade,.pp_gallery li.default a img{display:none}

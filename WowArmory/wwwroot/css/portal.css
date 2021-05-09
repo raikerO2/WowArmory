@@ -1,0 +1,57 @@
+    #portal {
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-width: 950px;
+        height: 40px;
+        z-index: 9999999;
+        position: fixed;
+        background: url(//cdn.cavernoftime.com/images/TopBar.png) repeat-x;
+    }
+
+        #portal ul {
+            padding: 6px;
+            margin: 0;
+            list-style: none;
+        }
+
+            #portal ul li {
+                float: left;
+                margin-left: 5px;
+            }
+
+        #portal .leftStub {
+            float: left;
+        }
+
+        #portal .rightStub {
+            float: right;
+            color: #d8f0ff;
+            margin-right:15x;
+        }
+
+        #portal .idBox {
+            width: 140px;
+            height: 20px;
+            background: #101417;
+            border: 1px solid #1f3e51;
+        }
+
+        #portal .userID input, #portal .userPW input {
+            height: 100%;
+            width: 136px;
+            font-size: 11px;
+            outline: none;
+            border: none;
+            background: transparent;
+            padding-left: 4px;
+            color: #73b2db;
+        }
+
+    .pl-sUB { /* Remove submit button */
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+    }
+
