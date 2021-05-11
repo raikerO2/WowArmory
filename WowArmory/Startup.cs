@@ -57,7 +57,7 @@ namespace WowArmory
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Items}/{action=GetItems}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "next-items",
@@ -66,6 +66,14 @@ namespace WowArmory
                 endpoints.MapControllerRoute(
                     name: "prev-items",
                     pattern: "{controller=Items}/{action=PreviousItems}/{items?}");
+
+                endpoints.MapControllerRoute(
+                    name: "items-index",
+                    pattern: "{controller=Items}");
+
+                endpoints.MapControllerRoute(
+                    name: "item",
+                    pattern: "{controller=Item}/{action=Item}/{id?}");
             });
         }
     }

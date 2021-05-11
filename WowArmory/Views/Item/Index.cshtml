@@ -1,7 +1,68 @@
 ﻿@model WowArmory.Models.DataModel
 
-@{ 
-    ViewData["Title"] = "Item";
+
+
+@if (@Model != null)
+{
+    ViewData["Title"] = Model.Name;
+
+    string iconLink = @WowArmory.Models.Core.Constants.Links.Wowhead + @Model.Icon + ".jpg";
+    <p><img src="@iconLink" /></p>
+    <p>Name: @Html.DisplayFor(x => x.Name)</p>
+    <p>Quality: @Html.DisplayFor(x => x.Quality)</p>
+    <p>Item-Level: @Html.DisplayFor(x => x.ItemLevel)</p>
+    <p>Required-Level: @Html.DisplayFor(x => x.RequiredLevel)</p>
+    <p>Sell-Price: @Html.DisplayFor(x => x.SellPrice)</p>
+    <p>Slot: @Html.DisplayFor(x => x.Slot)</p>
+    <p>Type: @Html.DisplayFor(x => x.Subclass)</p>
+    <p>Class: @Html.DisplayFor(x => x.Class)</p>
+    if (Model.Source != null && String.IsNullOrEmpty(Model.Source.Name))
+    {
+        <hr />
+        <u>Source:</u>
+        var type = Model.Source.GetType();
+        var properties = type.GetProperties();
+        foreach (var property in properties)
+        {
+            if (property != null)
+            {
+                var propertyValue = property.GetValue(Model.Source);
+                if (@property.Name != "SourceId" && propertyValue != null && @property.Name != "Quests")
+                {
+                    <p>@property.Name: @propertyValue</p>
+                }
+            }
+        }
+
+        if (Model.Source.Quests != null && @Model.Source.Quests.Count != 0)
+        {
+            <hr />
+            <u>Quests</u>
+            foreach (var quest in Model.Source.Quests)
+            {
+                <p>Name: @quest.Name</p>
+                if (quest.Faction != null)
+                {
+                    <p>Faction: @quest.Faction</p>
+                }
+            }
+        }
+    }
+
+    if (@Model.Tooltip != null && @Model.Tooltip.Count != 0)
+    {
+        <hr />
+        <u>Tooltips:</u>
+        @foreach (var z in @Model.Tooltip)
+        {
+            <p>Label: @z.Label</p>
+        }
+    }
+}
+else
+{
+    ViewData["Title"] = "Unavailable item";
+    <p>No item available.</p>
 }
 
 

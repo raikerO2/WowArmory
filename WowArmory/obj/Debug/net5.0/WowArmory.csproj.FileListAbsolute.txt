@@ -142,8 +142,6 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.TagHe
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.RazorCoreGenerate.cache
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Classes\Index.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Items\GetItems.cshtml.g.cs
-C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Items\Index.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Item\Index.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Professions\Index.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -161,4 +159,4 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\ref\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.pdb
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.genruntimeconfig.cache
-C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.csprojAssemblyReference.cache
+C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Items\Items.cshtml.g.cs

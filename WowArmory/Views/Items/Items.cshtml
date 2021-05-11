@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<WowArmory.Models.DataModel>
-
+@*Temporary style*@
 <style>
     th {
         padding: 10px;
@@ -15,7 +15,6 @@
     .main_table {
         margin: auto;
         width: 50%;
-        border: 1px solid black;
         padding: 10px;
     }
 
@@ -27,24 +26,20 @@
 </style>
 
 @{
-    ViewData["Title"] = "GetItems";
-}
-
-@{
-    string input = null;
+    ViewData["Title"] = "Items";
+    string name = null;
     const int itemsPerPage = 19;
 }
 
-<form class="search_bar" asp-action="GetItems" asp-controller="Items" method="get">
-    <input type="text" asp-for="@input" />
+<form class="search_bar" asp-action="Items" asp-controller="Items" method="get">
+    <input type="text" asp-for="@name" />
     <input type="submit" value="Search" />
 </form>
 
+@*Previous/Next*@
 @if (@Model != null && Model?.Count() != 0)
 {
     <div class="main_table">
-        <H2>Items</H2>
-
         @if (Model.Count() > itemsPerPage)
         {
             if (ViewBag.nextClicked == true)
@@ -55,7 +50,7 @@
             <a asp-action="NextItems" asp-controller="Items"> Next </a>
         }
 
-        @if (Model.Count() < itemsPerPage && ViewBag.nextClicked == true)
+        @if (Model.Count() <= itemsPerPage && ViewBag.nextClicked == true)
         {
             <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
         }
@@ -75,9 +70,9 @@
         {
             <tr>
                 <td>
-                    <img src="@WowArmory.Models.Core.Constants.Links.Wowhead@Html.DisplayFor(x => i.Icon)@String.Concat(".jpg")" />
+                    <a href="/item/item?id=@i.ItemId"><img src="@WowArmory.Models.Core.Constants.Links.Wowhead@Html.DisplayFor(x => i.Icon)@String.Concat(".jpg")" alt="@Html.DisplayFor(x => i.Name)" /></a>
                 </td>
-                <td>@Html.DisplayFor(x => i.Name)</td>
+                <td><a href="/item/item?id=@i.ItemId">@Html.DisplayFor(x => i.Name)</a></td>
                 <td>@Html.DisplayFor(x => i.ItemLevel)</td>
                 <td>@Html.DisplayFor(x => i.RequiredLevel)</td>
                 <td>@Html.DisplayFor(x => i.SellPrice)</td>

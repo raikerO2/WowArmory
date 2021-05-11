@@ -69,7 +69,9 @@ namespace WowArmory.Models
 
         [Column("d_source")]
         [Display(Name = "Source")]
-        public SourceModel Source { get; set; }
+#nullable enable
+        public SourceModel? Source { get; set; }
+#nullable disable
 
         [Column("d_uniquename")]
         [Display(Name = "Unique Name")]

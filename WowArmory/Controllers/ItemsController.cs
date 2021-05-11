@@ -31,6 +31,8 @@ namespace WowArmory.Controllers
             _database = database;
         }
 
+        [HttpGet]
+        [Route("items")]
         public IActionResult Index()
         {
             _searchedItem = null;
@@ -41,48 +43,51 @@ namespace WowArmory.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetItems(string input)
+        [AutoValidateAntiforgeryToken]
+        [Route("items/list")]
+        public IActionResult Items(string name)
         {
             _skipItems = 0;
-            if (String.IsNullOrEmpty(input))
+            if (String.IsNullOrEmpty(name))
             {
                 _firstTime = false;
                 ViewBag.nextClicked = _firstTime;
                 return View();
             }
 
-            _searchedItem = input;
+            _searchedItem = name;
             _firstTime = false;
             ViewBag.nextClicked = _firstTime;
             List<DataModel> itemList = _database.Data.Select(x => new DataModel
             {
-                DataId = x.DataId,
+                ItemId = x.ItemId,
                 Icon = x.Icon,
                 Name = x.Name,
                 ItemLevel = x.ItemLevel,
                 RequiredLevel = x.RequiredLevel,
                 SellPrice = x.SellPrice,
                 Subclass = x.Subclass
-            }).Where(x => x.Name.Contains(input)).Take(_itemsPerPage).ToList<DataModel>();
+            }).Where(x => x.Name.Contains(name)).Take(_itemsPerPage).ToList<DataModel>();
 
-            return View("GetItems", itemList);
-
+            return View(itemList);
         }
 
         [HttpGet]
-        [Route("next-items/items")]
+        [Route("items/next")]
+        [AutoValidateAntiforgeryToken]
         public IActionResult NextItems()
         {
             _skipItems += _itemsPerPage;
             _firstTime = true;
             ViewBag.nextClicked = _firstTime;
             List<DataModel> nextItems = GetItemsByPage(_itemsPerPage);
-           
-            return View("GetItems", nextItems);
+
+            return View("Items",nextItems);
         }
 
         [HttpGet]
-        [Route("prev-items/items")]
+        [AutoValidateAntiforgeryToken]
+        [Route("items/previous")]
         public IActionResult PreviousItems()
         {
             if (_skipItems >= 0)
@@ -93,8 +98,8 @@ namespace WowArmory.Controllers
                 _firstTime = true;
                 ViewBag.nextClicked = _firstTime;
                 List<DataModel> previousItems = GetItemsByPage(_itemsPerPage);
-                
-                return View("GetItems", previousItems);
+
+                return View("Items",previousItems);
             }
             else
             {
@@ -102,7 +107,7 @@ namespace WowArmory.Controllers
                 ViewBag.nextClicked = _firstTime;
                 List<DataModel> previousItems = _database.Data.Select(x => new DataModel
                 {
-                    DataId = x.DataId,
+                    ItemId = x.ItemId,
                     Icon = x.Icon,
                     Name = x.Name,
                     ItemLevel = x.ItemLevel,
@@ -111,7 +116,7 @@ namespace WowArmory.Controllers
                     Subclass = x.Subclass
                 }).Where(x => x.Name.Contains(_searchedItem)).Take(_itemsPerPage).ToList<DataModel>();
 
-                return View("GetItems", previousItems);
+                return View("Items",previousItems);
             }
         }
 
@@ -119,7 +124,7 @@ namespace WowArmory.Controllers
         {
             return _database.Data.Select(x => new DataModel
             {
-                DataId = x.DataId,
+                ItemId = x.ItemId,
                 Icon = x.Icon,
                 Name = x.Name,
                 ItemLevel = x.ItemLevel,
