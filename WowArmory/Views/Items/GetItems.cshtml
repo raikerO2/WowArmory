@@ -1,0 +1,89 @@
+﻿@model IEnumerable<WowArmory.Models.DataModel>
+
+<style>
+    th {
+        padding: 10px;
+        text-align: center;
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    .main_table {
+        margin: auto;
+        width: 50%;
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    .search_bar {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "GetItems";
+}
+
+@{
+    string input = null;
+    const int itemsPerPage = 19;
+}
+
+<form class="search_bar" asp-action="GetItems" asp-controller="Items" method="get">
+    <input type="text" asp-for="@input" />
+    <input type="submit" value="Search" />
+</form>
+
+@if (@Model != null && Model?.Count() != 0)
+{
+    <div class="main_table">
+        <H2>Items</H2>
+
+        @if (Model.Count() > itemsPerPage)
+        {
+            if (ViewBag.nextClicked == true)
+            {
+                <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
+            }
+
+            <a asp-action="NextItems" asp-controller="Items"> Next </a>
+        }
+
+        @if (Model.Count() < itemsPerPage && ViewBag.nextClicked == true)
+        {
+            <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
+        }
+
+    </div>
+
+    <table class="main_table">
+        <tr>
+            <th>Icon</th>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Level Required</th>
+            <th>Sell Price</th>
+            <th>Type</th>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@WowArmory.Models.Core.Constants.Links.Wowhead@Html.DisplayFor(x => i.Icon)@String.Concat(".jpg")" />
+                </td>
+                <td>@Html.DisplayFor(x => i.Name)</td>
+                <td>@Html.DisplayFor(x => i.ItemLevel)</td>
+                <td>@Html.DisplayFor(x => i.RequiredLevel)</td>
+                <td>@Html.DisplayFor(x => i.SellPrice)</td>
+                <td>@Html.DisplayFor(x => i.Subclass)</td>
+            </tr>
+        }
+
+    </table>
+}
