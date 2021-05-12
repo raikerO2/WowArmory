@@ -39,23 +39,26 @@
 @*Previous/Next*@
 @if (@Model != null)
 {
-    <div class="main_table">
-        @if (Model.Count() > itemsPerPage)
-        {
-            if (ViewBag.nextClicked == true)
-            {
-                <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
-            }
-
-            <a asp-action="NextItems" asp-controller="Items"> Next </a>
-        }
-
-        @if (Model.Count() <= itemsPerPage && ViewBag.nextClicked == true)
+<div class="main_table">
+    @if (Model.Count() > itemsPerPage)
+    {
+        if (ViewBag.nextClicked == true)
         {
             <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
         }
 
-    </div>
+        <a asp-action="NextItems" asp-controller="Items"> Next </a>
+    }
+
+    @if (Model.Count() <= itemsPerPage && ViewBag.nextClicked == true)
+    {
+        <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
+    }
+    @if (@ViewBag.numberOfItems > 0)
+    {
+<span style="text-align: right; position: absolute; right: 30%;">Items Found: @ViewBag.numberofItems</span>
+    }
+</div>
     if (Model?.Count() != 0)
     {
         <table class="main_table">

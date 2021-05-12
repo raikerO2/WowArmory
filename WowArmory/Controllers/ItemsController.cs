@@ -18,9 +18,12 @@ namespace WowArmory.Controllers
     public class ItemsController : Controller
     {
         private const int _itemsPerPage = 20;
+
         private static string _searchedItem = null;
-        private static int _skipItems = 0;
-        private static bool _firstTime = false;
+        private static int _skippedItems = 0;
+        private static bool _firstSearch = false;
+
+        private static int _searchResultCount = 0;
 
         private DatabaseContext _database = null;
         private readonly IConfiguration _config;
@@ -36,79 +39,40 @@ namespace WowArmory.Controllers
         public IActionResult Index()
         {
             _searchedItem = null;
-            _skipItems = 0;
-            _firstTime = false;
-            ViewBag.nextClicked = _firstTime;
+            _skippedItems = 0;
+            _firstSearch = false;
+            ViewBag.nextClicked = _firstSearch;
+            _searchResultCount = 0;
             return View();
         }
 
         [HttpGet]
-        [AutoValidateAntiforgeryToken]
         [Route("items/list")]
         public IActionResult Items(string name)
         {
-            _skipItems = 0;
+            _skippedItems = 0;
             if (String.IsNullOrEmpty(name))
             {
-                _firstTime = false;
-                ViewBag.nextClicked = _firstTime;
+                _firstSearch = false;
+                ViewBag.nextClicked = _firstSearch;
+                _searchResultCount = 0;
                 return View();
             }
 
+            List<DataModel> itemsFound = _database.Data.Select(
+                x => new DataModel { Name = x.Name }).
+                Where(x => x.Name.Contains(name)).
+                ToList<DataModel>();
+
+            _searchResultCount = itemsFound.Count();
+            ViewBag.numberOfItems = _searchResultCount;
+
             _searchedItem = name;
-            _firstTime = false;
-            ViewBag.nextClicked = _firstTime;
-            List<DataModel> itemList = _database.Data.Select(x => new DataModel
-            {
-                ItemId = x.ItemId,
-                Icon = x.Icon,
-                Name = x.Name,
-                ItemLevel = x.ItemLevel,
-                RequiredLevel = x.RequiredLevel,
-                SellPrice = x.SellPrice,
-                Subclass = x.Subclass
-            }).Where(x => x.Name.Contains(name)).Take(_itemsPerPage).ToList<DataModel>();
+            _firstSearch = false;
+            ViewBag.nextClicked = _firstSearch;
 
-            return View(itemList);
-        }
-
-        [HttpGet]
-        [Route("items/next")]
-        [AutoValidateAntiforgeryToken]
-        public IActionResult NextItems()
-        {
-            _skipItems += _itemsPerPage;
-            _firstTime = true;
-            ViewBag.nextClicked = _firstTime;
-            List<DataModel> nextItems = GetItemsByPage(_itemsPerPage);
-            if(nextItems.Count() == 0)
-            {
-                _skipItems -= _itemsPerPage;
-            }
-            return View("Items",nextItems);
-        }
-
-        [HttpGet]
-        [AutoValidateAntiforgeryToken]
-        [Route("items/previous")]
-        public IActionResult PreviousItems()
-        {
-            if (_skipItems > 0)
-                _skipItems -= _itemsPerPage;
-
-            if (_skipItems > 0)
-            {
-                _firstTime = true;
-                ViewBag.nextClicked = _firstTime;
-                List<DataModel> previousItems = GetItemsByPage(_itemsPerPage);
-
-                return View("Items",previousItems);
-            }
-            else
-            {
-                _firstTime = false;
-                ViewBag.nextClicked = _firstTime;
-                List<DataModel> previousItems = _database.Data.Select(x => new DataModel
+            List<DataModel> itemList = _database.Data.Select(
+                x => new DataModel
                 {
                     ItemId = x.ItemId,
                     Icon = x.Icon,
@@ -117,24 +81,92 @@ namespace WowArmory.Controllers
                     RequiredLevel = x.RequiredLevel,
                     SellPrice = x.SellPrice,
                     Subclass = x.Subclass
-                }).Where(x => x.Name.Contains(_searchedItem)).Take(_itemsPerPage).ToList<DataModel>();
+                }).Where(x => x.Name.Contains(name)).
+                Take(_itemsPerPage).ToList<DataModel>();
 
-                return View("Items",previousItems);
+            return View(itemList);
+        }
+
+        [HttpGet]
+        [Route("items/next")]
+        public IActionResult NextItems()
+        {
+            _skippedItems += _itemsPerPage;
+
+            _firstSearch = true;
+            ViewBag.nextClicked = _firstSearch;
+            List<DataModel> nextItems = GetItemsByPage(_itemsPerPage);
+
+            if (nextItems.Count() == 0)
+            {
+                ViewBag.numberOfItems = 0;
+                _skippedItems -= _itemsPerPage;
+            }
+            else
+            {
+                ViewBag.numberOfItems = _searchResultCount;
+            }
+            return View("Items", nextItems);
+        }
+
+        [HttpGet]
+        [Route("items/previous")]
+        public IActionResult PreviousItems()
+        {
+            if (_skippedItems > 0)
+            {
+                _skippedItems -= _itemsPerPage;
+
+                _firstSearch = true;
+                ViewBag.nextClicked = _firstSearch;
+                List<DataModel> previousItems = GetItemsByPage(_itemsPerPage);
+
+                ViewBag.numberOfItems = _searchResultCount;
+
+                return View("Items", previousItems);
+            }
+            else
+            {
+                _firstSearch = false;
+                ViewBag.nextClicked = _firstSearch;
+                List<DataModel> previousItems = _database.Data.Select(
+                    x => new DataModel
+                    {
+                        ItemId = x.ItemId,
+                        Icon = x.Icon,
+                        Name = x.Name,
+                        ItemLevel = x.ItemLevel,
+                        RequiredLevel = x.RequiredLevel,
+                        SellPrice = x.SellPrice,
+                        Subclass = x.Subclass
+                    }).Where(x => x.Name.Contains(_searchedItem)).
+                Take(_itemsPerPage).
+                ToList<DataModel>();
+
+                ViewBag.numberOfItems = _searchResultCount;
+
+                return View("Items", previousItems);
             }
         }
 
         private List<DataModel> GetItemsByPage(int pages)
         {
-            return _database.Data.Select(x => new DataModel
-            {
-                ItemId = x.ItemId,
-                Icon = x.Icon,
-                Name = x.Name,
-                ItemLevel = x.ItemLevel,
-                RequiredLevel = x.RequiredLevel,
-                SellPrice = x.SellPrice,
-                Subclass = x.Subclass
-            }).Where(x => x.Name.Contains(_searchedItem)).Skip(_skipItems).Take(pages).ToList<DataModel>();
+            List<DataModel> result = _database.Data.Select(
+                x => new DataModel
+                {
+                    ItemId = x.ItemId,
+                    Icon = x.Icon,
+                    Name = x.Name,
+                    ItemLevel = x.ItemLevel,
+                    RequiredLevel = x.RequiredLevel,
+                    SellPrice = x.SellPrice,
+                    Subclass = x.Subclass
+                }).Where(
+                x => x.Name.Contains(_searchedItem)).
+                Skip(_skippedItems).Take(pages).
+                ToList<DataModel>();
+
+            return result;
         }
     }
 }
