@@ -54,9 +54,12 @@
         {
             <a asp-action="PreviousItems" asp-controller="Items"> Previous </a>
         }
-        @if (@ViewBag.numberOfItems > 0)
+        @if (@ViewBag.NumberOfItems > 0)
         {
-            <span style="text-align: right; position: absolute; right: 30%;">Items Found: @ViewBag.numberofItems</span>
+            <span style="text-align: right; position: absolute; right: 30%;">@ViewBag.Start - @ViewBag.End items</span>
+            <span style="text-align: right; position: absolute; right: 24%;"> | Page @ViewBag.Page of @ViewBag.Pages </span>
+
+
         }
     </div>
     if (Model?.Count() != 0)

@@ -17,14 +17,20 @@ namespace WowArmory.Controllers
 {
     public class ItemsController : Controller
     {
-        private const int _itemsPerPage = 20;
-
-        private static string _searchedItem = null;
+        #region
+        private static string _name = null;
         private static int _skippedItems = 0;
-        private static bool _firstSearch = false;
+        private static bool _pressedSearch = false;
 
-        private static int _searchResultCount = 0;
+        private static int _items = 0;
+        private static int _pages = 0;
+        private static int _page = 1;
+        private const int _limit = 20; // Items per page
+        private static int _offset = 0;
+        private static int _start = 0;
+        private static int _end = 0;
 
+        #endregion
         private DatabaseContext _database = null;
         private readonly IConfiguration _config;
 
@@ -38,11 +44,12 @@ namespace WowArmory.Controllers
         [Route("items")]
         public IActionResult Index()
         {
-            _searchedItem = null;
+            _name = null;
             _skippedItems = 0;
-            _firstSearch = false;
-            ViewBag.nextClicked = _firstSearch;
-            _searchResultCount = 0;
+            _pressedSearch = false;
+            ViewBag.nextClicked = _pressedSearch;
+
+            RefreshVariables();
             return View();
         }
 
@@ -53,23 +60,38 @@ namespace WowArmory.Controllers
             _skippedItems = 0;
             if (String.IsNullOrEmpty(name))
             {
-                _firstSearch = false;
-                ViewBag.nextClicked = _firstSearch;
-                _searchResultCount = 0;
+                _pressedSearch = false;
+                ViewBag.nextClicked = _pressedSearch;
                 return View();
             }
 
-            List<DataModel> itemsFound = _database.Data.Select(
+            List<DataModel> items = _database.Data.Select(
                 x => new DataModel { Name = x.Name }).
                 Where(x => x.Name.Contains(name)).
                 ToList<DataModel>();
 
-            _searchResultCount = itemsFound.Count();
-            ViewBag.numberOfItems = _searchResultCount;
+            //
+            RefreshVariables();
+            //_page = Math.Min(_pages, _page);
+            //_items = items.Count();
+            _pages = (int)Math.Ceiling(items.Count() / (double)_limit);
+            _offset = (_page - 1) * _limit;
 
-            _searchedItem = name;
-            _firstSearch = false;
-            ViewBag.nextClicked = _firstSearch;
+            _start = _offset + 1;
+            _end = Math.Min((_offset + _limit), items.Count());
+            
+            ViewBag.Start = _start;
+            ViewBag.End = _end;
+
+            ViewBag.Page = _page;
+            ViewBag.Pages = _pages;
+            ViewBag.Offset = _offset;
+            ViewBag.NumberOfItems = items.Count();
+
+            _items = items.Count();
+            _name = name;
+            _pressedSearch = false;
+            ViewBag.nextClicked = _pressedSearch;
 
             List<DataModel> itemList = _database.Data.Select(
                 x => new DataModel
@@ -82,7 +104,8 @@ namespace WowArmory.Controllers
                     SellPrice = x.SellPrice,
                     Subclass = x.Subclass
                 }).Where(x => x.Name.Contains(name)).
-                Take(_itemsPerPage).ToList<DataModel>();
+                Take(_limit).ToList<DataModel>();
+
 
             return View(itemList);
         }
@@ -91,22 +114,42 @@ namespace WowArmory.Controllers
         [Route("items/next")]
         public IActionResult NextItems()
         {
-            _skippedItems += _itemsPerPage;
+            _skippedItems += _limit;
 
-            _firstSearch = true;
-            ViewBag.nextClicked = _firstSearch;
-            List<DataModel> nextItems = GetItemsByPage(_itemsPerPage);
+            _pressedSearch = true;
+            ViewBag.nextClicked = _pressedSearch;
+            List<DataModel> nextItems = ItemsPerPage(_limit);
 
             if (nextItems.Count() == 0)
             {
                 ViewBag.numberOfItems = 0;
-                _skippedItems -= _itemsPerPage;
+                _skippedItems -= _limit;
             }
             else
             {
-                ViewBag.numberOfItems = _searchResultCount;
+                if(_page < _pages)
+                {
+                    _page++;
+                    MoveToPage(nextItems);
+                }
             }
             return View("Items", nextItems);
+        }
+
+        private void MoveToPage(List<DataModel> itemNumber)
+        {
+            _offset = (_page - 1) * _limit;
+
+            _start = _offset + 1;
+            _end = Math.Min((_offset + itemNumber.Count()), _items);
+
+            ViewBag.Start = _start;
+            ViewBag.End = _end;
+
+            ViewBag.Page = _page;
+            ViewBag.Pages = _pages;
+            ViewBag.Offset = _offset;
+            ViewBag.NumberOfItems = _items;
         }
 
         [HttpGet]
@@ -114,22 +157,25 @@ namespace WowArmory.Controllers
         public IActionResult PreviousItems()
         {
             if (_skippedItems > 0)
-                _skippedItems -= _itemsPerPage;
+                _skippedItems -= _limit;
 
             if (_skippedItems > 0)
             {
-                _firstSearch = true;
-                ViewBag.nextClicked = _firstSearch;
-                List<DataModel> previousItems = GetItemsByPage(_itemsPerPage);
+                _pressedSearch = true;
+                ViewBag.nextClicked = _pressedSearch;
+                List<DataModel> previousItems = ItemsPerPage(_limit);
 
-                ViewBag.numberOfItems = _searchResultCount;
-
+                if (_page > 1)
+                {
+                    _page--;
+                    MoveToPage(previousItems);
+                }
                 return View("Items", previousItems);
             }
             else
             {
-                _firstSearch = false;
-                ViewBag.nextClicked = _firstSearch;
+                _pressedSearch = false;
+                ViewBag.nextClicked = _pressedSearch;
                 List<DataModel> previousItems = _database.Data.Select(
                     x => new DataModel
                     {
@@ -140,17 +186,17 @@ namespace WowArmory.Controllers
                         RequiredLevel = x.RequiredLevel,
                         SellPrice = x.SellPrice,
                         Subclass = x.Subclass
-                    }).Where(x => x.Name.Contains(_searchedItem)).
-                Take(_itemsPerPage).
+                    }).Where(x => x.Name.Contains(_name)).
+                Take(_limit).
                 ToList<DataModel>();
 
-                ViewBag.numberOfItems = _searchResultCount;
-
+                _page--;
+                MoveToPage(previousItems);
                 return View("Items", previousItems);
             }
         }
 
-        private List<DataModel> GetItemsByPage(int pages)
+        private List<DataModel> ItemsPerPage(int pages)
         {
             List<DataModel> result = _database.Data.Select(
                 x => new DataModel
@@ -163,11 +209,22 @@ namespace WowArmory.Controllers
                     SellPrice = x.SellPrice,
                     Subclass = x.Subclass
                 }).Where(
-                x => x.Name.Contains(_searchedItem)).
+                x => x.Name.Contains(_name)).
                 Skip(_skippedItems).Take(pages).
                 ToList<DataModel>();
 
             return result;
+        }
+
+        private void RefreshVariables()
+        {
+            _items = 0;
+            _pages = 0;
+            _page = 1;
+            _offset = 0;
+
+            _start = 0;
+            _end = 0;
         }
     }
 }
