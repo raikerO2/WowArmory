@@ -114,9 +114,10 @@ namespace WowArmory.Controllers
         public IActionResult PreviousItems()
         {
             if (_skippedItems > 0)
-            {
                 _skippedItems -= _itemsPerPage;
 
+            if (_skippedItems > 0)
+            {
                 _firstSearch = true;
                 ViewBag.nextClicked = _firstSearch;
                 List<DataModel> previousItems = GetItemsByPage(_itemsPerPage);
