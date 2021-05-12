@@ -81,7 +81,10 @@ namespace WowArmory.Controllers
             _firstTime = true;
             ViewBag.nextClicked = _firstTime;
             List<DataModel> nextItems = GetItemsByPage(_itemsPerPage);
-
+            if(nextItems.Count() == 0)
+            {
+                _skipItems -= _itemsPerPage;
+            }
             return View("Items",nextItems);
         }
 
@@ -90,7 +93,7 @@ namespace WowArmory.Controllers
         [Route("items/previous")]
         public IActionResult PreviousItems()
         {
-            if (_skipItems >= 0)
+            if (_skipItems > 0)
                 _skipItems -= _itemsPerPage;
 
             if (_skipItems > 0)

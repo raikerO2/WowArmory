@@ -37,7 +37,7 @@
 </form>
 
 @*Previous/Next*@
-@if (@Model != null && Model?.Count() != 0)
+@if (@Model != null)
 {
     <div class="main_table">
         @if (Model.Count() > itemsPerPage)
@@ -56,29 +56,36 @@
         }
 
     </div>
-
-    <table class="main_table">
-        <tr>
-            <th>Icon</th>
-            <th>Name</th>
-            <th>Level</th>
-            <th>Level Required</th>
-            <th>Sell Price</th>
-            <th>Type</th>
-        </tr>
-        @foreach (var i in Model)
-        {
+    if (Model?.Count() != 0)
+    {
+        <table class="main_table">
             <tr>
-                <td>
-                    <a href="/item/item?id=@i.ItemId"><img src="@WowArmory.Models.Core.Constants.Links.Wowhead@Html.DisplayFor(x => i.Icon)@String.Concat(".jpg")" alt="@Html.DisplayFor(x => i.Name)" /></a>
-                </td>
-                <td><a href="/item/item?id=@i.ItemId">@Html.DisplayFor(x => i.Name)</a></td>
-                <td>@Html.DisplayFor(x => i.ItemLevel)</td>
-                <td>@Html.DisplayFor(x => i.RequiredLevel)</td>
-                <td>@Html.DisplayFor(x => i.SellPrice)</td>
-                <td>@Html.DisplayFor(x => i.Subclass)</td>
+                <th>Icon</th>
+                <th>Name</th>
+                <th>Level</th>
+                <th>Level Required</th>
+                <th>Sell Price</th>
+                <th>Type</th>
             </tr>
-        }
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="/item/item?id=@i.ItemId"><img src="@WowArmory.Models.Core.Constants.Links.Wowhead@Html.DisplayFor(x => i.Icon)@String.Concat(".jpg")" alt="@Html.DisplayFor(x => i.Name)" /></a>
+                    </td>
+                    <td><a href="/item/item?id=@i.ItemId">@Html.DisplayFor(x => i.Name)</a></td>
+                    <td>@Html.DisplayFor(x => i.ItemLevel)</td>
+                    <td>@Html.DisplayFor(x => i.RequiredLevel)</td>
+                    <td>@Html.DisplayFor(x => i.SellPrice)</td>
+                    <td>@Html.DisplayFor(x => i.Subclass)</td>
+                </tr>
+            }
 
-    </table>
+        </table>
+    }
+    else
+    {
+        <h3>No more Items.</h3>
+    }
+
 }
