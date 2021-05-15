@@ -56,8 +56,8 @@
         }
         @if (@ViewBag.NumberOfItems > 0)
         {
-            <span style="text-align: right; position: absolute; right: 30%;">@ViewBag.Start - @ViewBag.End items</span>
-            <span style="text-align: right; position: absolute; right: 24%;"> | Page @ViewBag.Page of @ViewBag.Pages </span>
+    <span style="text-align: right; position: absolute; right: 30%;">@ViewBag.Start - @ViewBag.End items of @ViewBag.NumberOfItems</span>
+            <div style="text-align: right; position: absolute; right: 30%;">Page @ViewBag.Page of @ViewBag.Pages </div>
 
 
         }

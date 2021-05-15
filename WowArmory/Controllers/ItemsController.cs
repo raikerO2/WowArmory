@@ -18,21 +18,21 @@ namespace WowArmory.Controllers
     public class ItemsController : Controller
     {
         #region
-        private static string _name = null;
-        private static int _skippedItems = 0;
-        private static bool _pressedSearch = false;
+        private static string _name         = null;
+        private static int _skippedItems    = 0;
+        private static bool _pressedSearch  = false;
 
-        private static int _items = 0;
-        private static int _pages = 0;
-        private static int _page = 1;
-        private const int _limit = 20; // Items per page
-        private static int _offset = 0;
-        private static int _start = 0;
-        private static int _end = 0;
+        private static int _items   = 0;
+        private static int _pages   = 0;
+        private static int _page    = 1;
+        private const int _limit    = 20;
+        private static int _offset  = 0;
+        private static int _start   = 0;
+        private static int _end     = 0;
 
         #endregion
-        private DatabaseContext _database = null;
-        private readonly IConfiguration _config;
+        private DatabaseContext _database   = null;
+        private readonly IConfiguration     _config;
 
         public ItemsController(DatabaseContext database, IConfiguration config)
         {
@@ -79,7 +79,7 @@ namespace WowArmory.Controllers
 
             _start = _offset + 1;
             _end = Math.Min((_offset + _limit), items.Count());
-            
+
             ViewBag.Start = _start;
             ViewBag.End = _end;
 
@@ -127,7 +127,7 @@ namespace WowArmory.Controllers
             }
             else
             {
-                if(_page < _pages)
+                if (_page < _pages)
                 {
                     _page++;
                     MoveToPage(nextItems);
@@ -190,7 +190,6 @@ namespace WowArmory.Controllers
                 Take(_limit).
                 ToList<DataModel>();
 
-                _page--;
                 MoveToPage(previousItems);
                 return View("Items", previousItems);
             }
