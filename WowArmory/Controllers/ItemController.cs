@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,11 +25,11 @@ namespace WowArmory.Controllers
         }
 
         [HttpGet]
-        public IActionResult Item(int id)
+        public async Task<IActionResult> Item(int id)
         {
-            if(id != 0)
+            if (id != 0)
             {
-                var itemResult = _database.Data.Select(x => new DataModel
+                var itemResult = await _database.Data.Select(x => new DataModel
                 {
                     ItemId = x.ItemId,
                     Icon = x.Icon,
@@ -58,13 +59,13 @@ namespace WowArmory.Controllers
                     Slot = x.Slot,
                     Tooltip = x.Tooltip,
                     VendorPrice = x.VendorPrice
-                }).Where(x=>x.ItemId == id).FirstOrDefault();
+                }).Where(x => x.ItemId == id).FirstOrDefaultAsync();
 
                 //TO DO - join sourceid with the quest table id to show all of the quests with that id
-               // var resultQuery = from studentid in  
+                // var resultQuery = from studentid in  
 
-                if(itemResult != null)
-                    return View("Index",itemResult);
+                if (itemResult != null)
+                    return View("Index", itemResult);
             }
             return View("Index");
         }

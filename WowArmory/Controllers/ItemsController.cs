@@ -17,7 +17,7 @@ namespace WowArmory.Controllers
 {
     public class ItemsController : Controller
     {
-        #region
+        #region Private Fields
         private static string _name         = null;
         private static int _skippedItems    = 0;
         private static bool _pressedSearch  = false;
@@ -31,13 +31,13 @@ namespace WowArmory.Controllers
         private static int _end     = 0;
 
         #endregion
-        private DatabaseContext _database   = null;
-        private readonly IConfiguration     _config;
+        private DatabaseContext _database           = null;
+        private readonly        IConfiguration      _config;
 
         public ItemsController(DatabaseContext database, IConfiguration config)
         {
-            _config = config;
-            _database = database;
+            _config     = config;
+            _database   = database;
         }
 
         [HttpGet]
@@ -55,7 +55,7 @@ namespace WowArmory.Controllers
 
         [HttpGet]
         [Route("items/list")]
-        public IActionResult Items(string name)
+        public async Task<IActionResult> Items(string name)
         {
             _skippedItems = 0;
             if (String.IsNullOrEmpty(name))
@@ -70,10 +70,7 @@ namespace WowArmory.Controllers
                 Where(x => x.Name.Contains(name)).
                 ToList<DataModel>();
 
-            //
             RefreshVariables();
-            //_page = Math.Min(_pages, _page);
-            //_items = items.Count();
             _pages = (int)Math.Ceiling(items.Count() / (double)_limit);
             _offset = (_page - 1) * _limit;
 
@@ -93,7 +90,7 @@ namespace WowArmory.Controllers
             _pressedSearch = false;
             ViewBag.nextClicked = _pressedSearch;
 
-            List<DataModel> itemList = _database.Data.Select(
+            List<DataModel> itemList = await _database.Data.Select(
                 x => new DataModel
                 {
                     ItemId = x.ItemId,
@@ -104,21 +101,20 @@ namespace WowArmory.Controllers
                     SellPrice = x.SellPrice,
                     Subclass = x.Subclass
                 }).Where(x => x.Name.Contains(name)).
-                Take(_limit).ToList<DataModel>();
-
+                Take(_limit).ToListAsync<DataModel>();
 
             return View(itemList);
         }
 
         [HttpGet]
         [Route("items/next")]
-        public IActionResult NextItems()
+        public async Task<IActionResult> NextItems()
         {
             _skippedItems += _limit;
 
             _pressedSearch = true;
             ViewBag.nextClicked = _pressedSearch;
-            List<DataModel> nextItems = ItemsPerPage(_limit);
+            List<DataModel> nextItems = await ItemsPerPage(_limit);
 
             if (nextItems.Count() == 0)
             {
@@ -154,7 +150,7 @@ namespace WowArmory.Controllers
 
         [HttpGet]
         [Route("items/previous")]
-        public IActionResult PreviousItems()
+        public async Task<IActionResult> PreviousItems()
         {
             if (_skippedItems > 0)
                 _skippedItems -= _limit;
@@ -163,7 +159,7 @@ namespace WowArmory.Controllers
             {
                 _pressedSearch = true;
                 ViewBag.nextClicked = _pressedSearch;
-                List<DataModel> previousItems = ItemsPerPage(_limit);
+                List<DataModel> previousItems = await ItemsPerPage(_limit);
 
                 if (_page > 1)
                 {
@@ -176,7 +172,7 @@ namespace WowArmory.Controllers
             {
                 _pressedSearch = false;
                 ViewBag.nextClicked = _pressedSearch;
-                List<DataModel> previousItems = _database.Data.Select(
+                List<DataModel> previousItems = await _database.Data.Select(
                     x => new DataModel
                     {
                         ItemId = x.ItemId,
@@ -188,16 +184,16 @@ namespace WowArmory.Controllers
                         Subclass = x.Subclass
                     }).Where(x => x.Name.Contains(_name)).
                 Take(_limit).
-                ToList<DataModel>();
+                ToListAsync<DataModel>();
 
                 MoveToPage(previousItems);
                 return View("Items", previousItems);
             }
         }
 
-        private List<DataModel> ItemsPerPage(int pages)
+        private async Task<List<DataModel>> ItemsPerPage(int pages)
         {
-            List<DataModel> result = _database.Data.Select(
+            List<DataModel> result = await _database.Data.Select(
                 x => new DataModel
                 {
                     ItemId = x.ItemId,
@@ -210,7 +206,7 @@ namespace WowArmory.Controllers
                 }).Where(
                 x => x.Name.Contains(_name)).
                 Skip(_skippedItems).Take(pages).
-                ToList<DataModel>();
+                ToListAsync<DataModel>();
 
             return result;
         }
