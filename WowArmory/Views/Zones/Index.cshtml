@@ -1,5 +1,37 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<WowArmory.Models.ZoneModel>
+
 @{
+    ViewData["Title"] = "Zones";
 }
+<style>
+    tr,th,td{
+        padding: 10px;
+    }
+    
+</style>
+
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Category
+        </th>
+        <th>Territory</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>
+                <a href="/zones/zone?name=@x.Name">@Html.DisplayFor(model => x.Name)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(model => x.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(model => x.Territory)
+            </td>
+        </tr>
+    }
+</table>

@@ -70,7 +70,6 @@ namespace WowArmory.Models.Core
         public async Task<List<DataModel>> GetAllItemsAsync(string name)
         {
             return await _database.Data.Select(x => new DataModel { Name = x.Name }).Where(x => x.Name.Contains(name)).ToListAsync();
-
         }
 
         public async Task<List<DataModel>> GetByNameAsync(string name)

@@ -1,0 +1,11 @@
+﻿@model ZoneModel 
+
+@{ 
+    ViewData["Title"] = Model.Name;
+    string imgFormat = ".jpg";
+}
+
+<h1>@ViewBag.Name</h1>
+<h4>@Html.DisplayFor(model => model.Category)</h4>
+<h4>@Html.DisplayFor(model => model.Territory)</h4>
+<img src="~/Maps/@Model.Name@imgFormat" />

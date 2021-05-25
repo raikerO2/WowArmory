@@ -161,3 +161,4 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.pdb
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.genruntimeconfig.cache
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Items\Items.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.csprojAssemblyReference.cache
+C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Zones\Zone.cshtml.g.cs
