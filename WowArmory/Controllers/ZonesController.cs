@@ -13,7 +13,7 @@ namespace WowArmory.Controllers
     {
         private DatabaseContext _database = null;
         private static List<string> maps = new List<string>();
-        private static List<Tuple<string,string>> exceptionNames = new List<Tuple<string,string>>()
+        private static List<Tuple<string,string>> specialNames = new List<Tuple<string,string>>()
         {
             new Tuple<string,string>("Zul'Gurub","Zulgurub"),
             new Tuple<string,string>("Zul'Farrak","Zulfarrak"),
@@ -26,32 +26,29 @@ namespace WowArmory.Controllers
             _database = db;
         }
 
-        [HttpGet]
-        public IActionResult Index()
+        private IQueryable<ZoneModel> SelectZone()
         {
-            List<ZoneModel> zones = _database.Zones
+            return _database.Zones
                 .Select(x => new ZoneModel
                 {
                     Name = x.Name,
                     Category = x.Category,
-                    Territory = x.Territory
-                })
+                    Territory = x.Territory,
+                    Level = new LevelModel
+                    {
+                        Level1 = x.Level.Level1,
+                        Level2 = x.Level.Level2
+                    }
+                });
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            List<ZoneModel> zones = SelectZone()
                 .Distinct()
                 .ToList();
             return View(zones);
-        }
-
-        private void GetImgNames()
-        {
-            List<string> fileNames = new List<string>();
-            var myDirectory = Directory.GetFiles(@".\wwwroot\Maps\");
-            string fromFolder;
-            
-            foreach(var file in myDirectory)
-            {
-                fromFolder = Path.GetFileNameWithoutExtension(file);
-                maps.Add(fromFolder);
-            }
         }
 
         [HttpGet]
@@ -63,18 +60,14 @@ namespace WowArmory.Controllers
             if (String.IsNullOrEmpty(name))
                 return View();
 
-            ZoneModel zone = _database.Zones
-                .Select(x => new ZoneModel { 
-                    Name = x.Name, 
-                    Category = x.Category, 
-                    Territory = x.Territory 
-                }).Where(x=> x.Name.Contains(name)).FirstOrDefault();
+            ZoneModel zone = SelectZone()
+                .Where(x=> x.Name.Contains(name)).FirstOrDefault();
 
             ViewBag.Name = name;
 
             foreach (var i in maps)
             {
-                foreach(var x in exceptionNames)
+                foreach(var x in specialNames)
                 {
                     if(name.Contains(x.Item1))
                     {
@@ -95,5 +88,19 @@ namespace WowArmory.Controllers
             }
             return View(zone);
         }
+
+        private void GetImgNames()
+        {
+            List<string> fileNames = new List<string>();
+            var myDirectory = Directory.GetFiles(@".\wwwroot\Maps\");
+            string fromFolder;
+
+            foreach (var file in myDirectory)
+            {
+                fromFolder = Path.GetFileNameWithoutExtension(file);
+                maps.Add(fromFolder);
+            }
+        }
+
     }
 }

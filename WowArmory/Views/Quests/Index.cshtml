@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SourceModel>
+
+@{
+    ViewData["Title"] = "Quests";
+}
+
+<style>
+    tr, th, td {
+        padding: 15px;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Faction
+        </th>
+        <th>
+            Category
+        </th>
+    </tr>
+    @foreach (var x in @Model)
+    {
+        @foreach (var y in x.Quests)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => y.Name)</td>
+                <td>@Html.DisplayFor(model => y.Faction)</td>
+                <td>@Html.DisplayFor(model => x.Category)</td>
+            </tr>
+        }
+    }
+</table>

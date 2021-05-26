@@ -162,3 +162,4 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.genru
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Items\Items.cshtml.g.cs
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.csprojAssemblyReference.cache
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Zones\Zone.cshtml.g.cs
+C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\Razor\Views\Quests\Index.cshtml.g.cs
