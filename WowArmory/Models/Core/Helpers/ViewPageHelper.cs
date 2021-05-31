@@ -7,16 +7,16 @@ using WowArmory.Factory;
 
 namespace WowArmory.Models.Core.Helpers
 {
-    public static class UpdateHelper
+    public static class ViewPageHelper
     {
-        public static void AddToView(this Controller controller, PageHelper helper)
+        public static void BindToView(this Controller controller, PageHelper helper)
         {
             controller.ViewBag.Start = helper.Start;
             controller.ViewBag.End = helper.End;
-
             controller.ViewBag.Page = helper.Page;
             controller.ViewBag.Pages = helper.Pages;
             controller.ViewBag.NumberOfItems = helper.NumberOfItems;
+            controller.ViewBag.nextClicked = helper.PressedNext;
         }
     }
 }

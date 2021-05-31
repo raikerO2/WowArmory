@@ -21,7 +21,7 @@ namespace WowArmory.Controllers
         #region Private Fields
         private static string _name         = null;
         private static int _skippedItems    = 0;
-        private static bool _pressedSearch  = false;
+        private static bool _pressedNext  = false;
 
         private static int _items   = 0;
         private static int _pages   = 0;
@@ -47,12 +47,8 @@ namespace WowArmory.Controllers
         [Route("items")]
         public IActionResult Index()
         {
-            _name = null;
-            _skippedItems = 0;
-            _pressedSearch = false;
-            ViewBag.nextClicked = _pressedSearch;
-            _pageHelper.Dispose();
-            //RefreshVariables();
+            _pageHelper.Dispose(null);
+            this.BindToView(_pageHelper);
             return View();
         }
 
@@ -62,8 +58,8 @@ namespace WowArmory.Controllers
         {
             if (String.IsNullOrEmpty(name))
             {
-                _pressedSearch = false;
-                ViewBag.nextClicked = _pressedSearch;
+                _pressedNext = false;
+                ViewBag.nextClicked = _pressedNext;
                 return View();
             }
 
@@ -72,12 +68,8 @@ namespace WowArmory.Controllers
                 Where(x => x.Name.Contains(name)).
                 ToList<DataModel>();
 
-            _pageHelper.Startup<DataModel>(items);
-            this.AddToView(_pageHelper);
-
-            _name = name;
-            _pressedSearch = false;
-            ViewBag.nextClicked = _pressedSearch;
+            _pageHelper.Startup<DataModel>(items, contains: name);
+            this.BindToView(_pageHelper);
 
             List<DataModel> itemList = await _database.Data.Select(
                 x => new DataModel
@@ -101,8 +93,8 @@ namespace WowArmory.Controllers
         {
             _skippedItems += _limit;
 
-            _pressedSearch = true;
-            ViewBag.nextClicked = _pressedSearch;
+            _pressedNext = true;
+            ViewBag.nextClicked = _pressedNext;
             List<DataModel> nextItems = await ItemsPerPage(_limit);
 
             if (nextItems.Count() == 0)
@@ -146,8 +138,8 @@ namespace WowArmory.Controllers
 
             if (_skippedItems > 0)
             {
-                _pressedSearch = true;
-                ViewBag.nextClicked = _pressedSearch;
+                _pressedNext = true;
+                ViewBag.nextClicked = _pressedNext;
                 List<DataModel> previousItems = await ItemsPerPage(_limit);
 
                 if (_page > 1)
@@ -159,8 +151,8 @@ namespace WowArmory.Controllers
             }
             else
             {
-                _pressedSearch = false;
-                ViewBag.nextClicked = _pressedSearch;
+                _pressedNext = false;
+                ViewBag.nextClicked = _pressedNext;
                 List<DataModel> previousItems = await _database.Data.Select(
                     x => new DataModel
                     {
@@ -180,7 +172,7 @@ namespace WowArmory.Controllers
             }
         }
 
-        private async Task<List<DataModel>> ItemsPerPage(int pages)
+        private async Task<List<DataModel>> ItemsPerPage(int number)
         {
             List<DataModel> result = await _database.Data.Select(
                 x => new DataModel
@@ -194,7 +186,7 @@ namespace WowArmory.Controllers
                     Subclass = x.Subclass
                 }).Where(
                 x => x.Name.Contains(_name)).
-                Skip(_skippedItems).Take(pages).
+                Skip(_skippedItems).Take(number).
                 ToListAsync<DataModel>();
 
             return result;
