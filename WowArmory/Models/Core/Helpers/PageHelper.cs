@@ -18,27 +18,29 @@ namespace WowArmory.Factory
         public int NumberOfItems { get => _numberOfItems; }
         public int PageLimit { get => _pageLimit; }
         public bool PressedNext { get => _pressedNext; }
+        public string Name { get => _name; }
+        public int SkippedItems { get => _skippedItems; }
 
-        private int _skippedItems = 0;
-        private bool _pressedNext = false;
+        private static int _skippedItems = 0;
+        private static bool _pressedNext = false;
 
-        private int _numberOfItems = 0;
-        private int _pages = 0;
-        private int _page = 1;
-        private int _pageLimit = 20;
-        private int _offset = 0;
-        private int _start = 0;
-        private int _end = 0;
+        private static int _numberOfItems = 0;
+        private static int _pages = 0;
+        private static int _page = 1;
+        private static int _pageLimit = 20;
+        private static int _offset = 0;
+        private static int _start = 0;
+        private static int _end = 0;
         private static string _name = null;
 
         public PageHelper() { }
         public PageHelper(int pageLimit) { _pageLimit = pageLimit; }
 
-        public void Startup<TDataType>(List<TDataType> items, string contains) where TDataType : class
+        public void Startup<TDataType>(List<TDataType> allItems, string contains) where TDataType : class
         {
-            Dispose(DisposePage.Search);
-            FirstResult<TDataType>(items);
-            _numberOfItems = items.Count();
+            Dispose(DisposeComponent.Search);
+            FirstResult<TDataType>(allItems);
+            _numberOfItems = allItems.Count();
             _name = contains;
             _pressedNext = false;
         }
@@ -50,6 +52,51 @@ namespace WowArmory.Factory
             _numberOfItems = items.Count();
         }
 
+        public bool PreviousPage<TDataType>(List<TDataType> items) where TDataType : class
+        {
+            if (_skippedItems > 0)
+                _skippedItems -= _pageLimit;
+
+            if (_skippedItems > 0)
+            {
+                _skippedItems -= _pageLimit;
+                _pressedNext = true;
+
+                if(_page > 1)
+                {
+                    _page--;
+                    MoveToPage<TDataType>(items);
+                }
+                return true;
+            }
+            else
+            {
+                _pressedNext = false;
+                MoveToPage<TDataType>(items);
+                return false;
+            }
+        }
+
+        public void NextPage<TDataType>(List<TDataType> items) where TDataType : class
+        {
+            _skippedItems += _pageLimit;
+            _pressedNext = true;
+
+            if(items.Count() == 0)
+            {
+                _skippedItems -= _pageLimit;
+            }
+            else
+            {
+                if(_page < _pages)
+                {
+                    _page++;
+                    MoveToPage<TDataType>(items);
+                }
+            }
+
+        }
+
         public void MoveToPage<TDataType>(List<TDataType> numberOfItems) where TDataType : class
         {
             _offset = (_page - 1) * _pageLimit;
@@ -58,18 +105,18 @@ namespace WowArmory.Factory
             _end = Math.Min((_offset + numberOfItems.Count()), _numberOfItems);
         }
         
-        public void Dispose(DisposePage? disposer)
+        public void Dispose(DisposeComponent? disposer)
         {
             switch(disposer)
             {
-                case DisposePage.Search:
+                case DisposeComponent.Search:
                      _numberOfItems = 0;
                     _pages = 0;
                     _page = 1;
                     _offset = 0;
                     _pressedNext = false;
                     break;
-                case DisposePage.Pagination:
+                case DisposeComponent.Pagination:
                     _pressedNext = false;
                     _name = null;
                     break;
@@ -102,10 +149,9 @@ namespace WowArmory.Factory
         }
 
     }
-    public enum DisposePage
+    public enum DisposeComponent
     {
         Search,
-        Pagination,
-        All
+        Pagination
     }
 }
