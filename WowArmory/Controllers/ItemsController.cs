@@ -51,7 +51,8 @@ namespace WowArmory.Controllers
             _skippedItems = 0;
             _pressedSearch = false;
             ViewBag.nextClicked = _pressedSearch;
-            RefreshVariables();
+            _pageHelper.Dispose();
+            //RefreshVariables();
             return View();
         }
 
@@ -59,7 +60,6 @@ namespace WowArmory.Controllers
         [Route("items/list")]
         public async Task<IActionResult> Items(string name)
         {
-            _skippedItems = 0;
             if (String.IsNullOrEmpty(name))
             {
                 _pressedSearch = false;
@@ -72,22 +72,9 @@ namespace WowArmory.Controllers
                 Where(x => x.Name.Contains(name)).
                 ToList<DataModel>();
 
-            RefreshVariables();
-            _pages = (int)Math.Ceiling(items.Count() / (double)_limit);
-            _offset = (_page - 1) * _limit;
+            _pageHelper.Startup<DataModel>(items);
+            this.AddToView(_pageHelper);
 
-            _start = _offset + 1;
-            _end = Math.Min((_offset + _limit), items.Count());
-
-            ViewBag.Start = _start;
-            ViewBag.End = _end;
-
-            ViewBag.Page = _page;
-            ViewBag.Pages = _pages;
-            ViewBag.Offset = _offset;
-            ViewBag.NumberOfItems = items.Count();
-
-            _items = items.Count();
             _name = name;
             _pressedSearch = false;
             ViewBag.nextClicked = _pressedSearch;

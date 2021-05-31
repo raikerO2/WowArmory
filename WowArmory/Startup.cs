@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WowArmory.Factory;
 using WowArmory.Models.Core.Context;
 
 namespace WowArmory
@@ -25,6 +26,7 @@ namespace WowArmory
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<PageHelper>();
             services.AddControllersWithViews();
 
             services.AddDbContext<DatabaseContext>(options =>
