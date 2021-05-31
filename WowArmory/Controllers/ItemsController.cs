@@ -12,6 +12,7 @@ using WowArmory.Factory;
 using WowArmory.Models;
 using WowArmory.Models.Core;
 using WowArmory.Models.Core.Context;
+using WowArmory.Models.Core.Helpers;
 
 namespace WowArmory.Controllers
 {
@@ -33,11 +34,13 @@ namespace WowArmory.Controllers
         #endregion
         private DatabaseContext _database           = null;
         private readonly        IConfiguration      _config;
+        private PageHelper _pageHelper              = null;
 
-        public ItemsController(DatabaseContext database, IConfiguration config)
+        public ItemsController(DatabaseContext database, IConfiguration config, PageHelper pageHelper)
         {
             _config     = config;
             _database   = database;
+            _pageHelper = pageHelper;
         }
 
         [HttpGet]
@@ -48,7 +51,6 @@ namespace WowArmory.Controllers
             _skippedItems = 0;
             _pressedSearch = false;
             ViewBag.nextClicked = _pressedSearch;
-
             RefreshVariables();
             return View();
         }

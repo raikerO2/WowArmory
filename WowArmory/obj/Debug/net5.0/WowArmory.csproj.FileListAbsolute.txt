@@ -162,3 +162,4 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\ref\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.pdb
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.genruntimeconfig.cache
+C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.csprojAssemblyReference.cache
