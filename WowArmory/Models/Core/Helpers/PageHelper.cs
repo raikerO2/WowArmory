@@ -21,12 +21,14 @@ namespace WowArmory.Factory
         public string Name { get => _name; }
         public int SkippedItems { get => _skippedItems; }
 
+        private static bool _initialized = false;
+
         private static int _skippedItems = 0;
         private static bool _pressedNext = false;
 
         private static int _numberOfItems = 0;
         private static int _pages = 0;
-        private static int _page = 1;
+        private static int _page = 0;
         private static int _pageLimit = 20;
         private static int _offset = 0;
         private static int _start = 0;
@@ -36,11 +38,11 @@ namespace WowArmory.Factory
         public PageHelper() { }
         public PageHelper(int pageLimit) { _pageLimit = pageLimit; }
 
-        public void Startup<TDataType>(List<TDataType> allItems, string contains) where TDataType : class
+        public void Startup<TDataType>(List<TDataType> query, string contains) where TDataType : class
         {
             Dispose(DisposeComponent.Search);
-            FirstResult<TDataType>(allItems);
-            _numberOfItems = allItems.Count();
+            FirstResult<TDataType>(query);
+            _numberOfItems = query.Count();
             _name = contains;
             _pressedNext = false;
         }
@@ -55,11 +57,7 @@ namespace WowArmory.Factory
         public bool PreviousPage<TDataType>(List<TDataType> items) where TDataType : class
         {
             if (_skippedItems > 0)
-                _skippedItems -= _pageLimit;
-
-            if (_skippedItems > 0)
             {
-                _skippedItems -= _pageLimit;
                 _pressedNext = true;
 
                 if(_page > 1)
@@ -67,6 +65,7 @@ namespace WowArmory.Factory
                     _page--;
                     MoveToPage<TDataType>(items);
                 }
+                _skippedItems -= _pageLimit;
                 return true;
             }
             else
@@ -77,11 +76,18 @@ namespace WowArmory.Factory
             }
         }
 
+        public void SkipNext(int limit)
+        {
+            _skippedItems += limit;
+        }
+        public void SkipPrevious(int limit)
+        {
+            _skippedItems -= limit;
+        }
+
         public void NextPage<TDataType>(List<TDataType> items) where TDataType : class
         {
-            _skippedItems += _pageLimit;
             _pressedNext = true;
-
             if(items.Count() == 0)
             {
                 _skippedItems -= _pageLimit;
@@ -136,6 +142,7 @@ namespace WowArmory.Factory
 
         private void FirstResult<TDataType>(List<TDataType> items) where TDataType : class
         {
+            _initialized = true;
             _pages = (int)Math.Ceiling(items.Count() / (double)_pageLimit);
             _offset = (_page - 1) * _pageLimit;
 

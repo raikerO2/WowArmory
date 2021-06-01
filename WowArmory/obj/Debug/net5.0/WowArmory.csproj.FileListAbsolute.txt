@@ -14,6 +14,8 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\ref\WowArmory.d
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\WowArmory.pdb
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\WowArmory.Views.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\WowArmory.Views.pdb
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\EntityFramework.SqlServer.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\EntityFramework.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Humanizer.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -52,6 +54,7 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Microsoft.Visua
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.CodeDom.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Collections.Immutable.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.ComponentModel.Annotations.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Composition.AttributedModel.dll
@@ -60,6 +63,7 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Composit
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Composition.Runtime.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Composition.TypedParts.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Data.SqlClient.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\System.Runtime.Caching.dll
@@ -125,6 +129,11 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-x6
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.GeneratedMSBuildEditorConfig.editorconfig
@@ -162,4 +171,3 @@ C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\ref\WowArmory.dll
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.pdb
 C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.genruntimeconfig.cache
-C:\Users\rares\source\repos\WowArmory\WowArmory\obj\Debug\net5.0\WowArmory.csprojAssemblyReference.cache
